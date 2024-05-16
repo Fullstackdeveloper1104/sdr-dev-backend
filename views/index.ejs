@@ -1,0 +1,2320 @@
+<!doctype html>
+<html lang="en" class="h-full">
+	<head>
+		<meta charset="UTF-8" />
+		<script>
+			(function(apiKey){
+				(function(p,e,n,d,o){var v,w,x,y,z;o=p[d]=p[d]||{};o._q=o._q||[];
+				v=['initialize','identify','updateOptions','pageLoad','track'];for(w=0,x=v.length;w<x;++w)(function(m){
+					o[m]=o[m]||function(){o._q[m===v[0]?'unshift':'push']([m].concat([].slice.call(arguments,0)));};})(v[w]);
+					y=e.createElement(n);y.async=!0;y.src='https://cdn.pendo.io/agent/static/'+apiKey+'/pendo.js';
+					z=e.getElementsByTagName(n)[0];z.parentNode.insertBefore(y,z);})(window,document,'script','pendo');
+			
+					// This function creates visitors and accounts in Pendo
+					// You will need to replace <visitor-id-goes-here> and <account-id-goes-here> with values you use in your app
+					// Please use Strings, Numbers, or Bools for value types.
+					pendo.initialize({
+						visitor: {
+							id: '' // Required if user is logged in
+						},
+			
+						account: {
+							id: '' // Highly recommended, required if using Pendo Feedback
+						}
+					});
+			})('628eea52-f656-462b-7f40-05c051ffc059');
+			</script>
+		<script language='javascript' async='true' type='text/javascript' src='https://cdn.whatfix.com/prod/bea0e9f8-4ed7-4900-a6c4-6512a459773c/initiator/initiator.nocache.js'></script>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Prospect IQ</title>
+
+		<!-- Google Font -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap"
+			rel="stylesheet" />
+
+		<!-- Styles -->
+		<link rel="stylesheet" href="/assets/css/tiny-slider.css" />
+		<link rel="stylesheet" href="assets/css/aos.min.css" />
+		<link rel="stylesheet" href="assets/css/style.css" />
+	</head>
+	<body class="relative z-10 h-full bg-slate-50 text-primary">
+		<div class="app flex h-full flex-col lg:flex-row">
+			<!-- Header / Sidebar -->
+			<header class="relative w-full py-4 lg:h-full lg:w-72 lg:py-8">
+				<!-- bg image -->
+				<div
+					class="absolute inset-0 -z-10 h-20 w-full bg-primary bg-[url('/assets/img/sidebar-bg.jpg')] bg-cover bg-center bg-no-repeat lg:h-full lg:w-96"></div>
+
+				<div class="relative z-10 flex h-full justify-between gap-10 px-5 lg:flex-col">
+					<a href="" class="block">
+						<img
+							src="assets/img/prospectiq-logo.svg"
+							alt="ProspectIQ Logo"
+							class="h-8 lg:h-10" />
+					</a>
+
+					<ul class="hidden flex-1 space-y-1.5 lg:block">
+						<li>
+							<a
+								class="group flex items-center gap-3.5 rounded-lg px-2.5 py-2 font-medium text-white transition hover:bg-secondary hover:text-white"
+								href="/mdashboard">
+								<span class="text-secondary transition group-hover:text-white">
+									<svg
+										xmlns="http://www.w3.org/2000/svg"
+										fill="none"
+										stroke="currentColor"
+										stroke-linecap="round"
+										stroke-linejoin="round"
+										stroke-width="2"
+										class="h-5 w-5"
+										viewBox="0 0 24 24">
+										<path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+										<path d="M9 22V12h6v10" />
+									</svg>
+								</span>
+								<span>Manager Dashboard</span>
+							</a>
+						</li>
+					</ul>
+
+					<div class="hidden lg:block">
+						<img src="/assets/img/iqconnect.png" alt="" class="h-5" />
+					</div>
+
+					<!-- Navigation Toggle -->
+					<button
+						type="button"
+						class="text-white/70 transition hover:text-white lg:hidden"
+						data-hs-overlay="#mobile-sidebar"
+						aria-controls="mobile-sidebar"
+						aria-label="Toggle navigation">
+						<span class="sr-only">Toggle Navigation</span>
+						<svg class="h-9 w-9 flex-shrink-0" fill="currentColor" viewBox="0 0 16 16">
+							<path
+								fill-rule="evenodd"
+								d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
+						</svg>
+					</button>
+					<!-- End Navigation Toggle -->
+				</div>
+
+				<!-- Sidebar Mobile  -->
+				<div
+					id="mobile-sidebar"
+					class="hs-overlay fixed bottom-0 start-0 top-0 z-[60] hidden w-64 -translate-x-full transform overflow-y-auto bg-primary transition-all duration-300 hs-overlay-open:translate-x-0 [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-thumb]:bg-gray-300 [&::-webkit-scrollbar-track]:bg-gray-100 [&::-webkit-scrollbar]:w-2">
+					<div class="flex h-full flex-col justify-between gap-5 p-5">
+						<div class="">
+							<a href="" class="block">
+								<img
+									src="/assets/img/prospectiq-logo.svg"
+									alt="ProspectIQ Logo"
+									class="h-8 lg:h-10" />
+							</a>
+						</div>
+						<nav
+							class="hs-accordion-group mt-3 flex w-full flex-1 flex-col flex-wrap"
+							data-hs-accordion-always-open>
+							<ul class="flex-1 space-y-1.5">
+								<li>
+									<a
+										class="group flex items-center gap-3.5 rounded-lg px-2.5 py-2 font-medium text-white transition hover:bg-secondary hover:text-white"
+										href="/">
+										<span
+											class="text-secondary transition group-hover:text-white">
+											<svg
+												xmlns="http://www.w3.org/2000/svg"
+												fill="none"
+												stroke="currentColor"
+												stroke-linecap="round"
+												stroke-linejoin="round"
+												stroke-width="2"
+												class="h-5 w-5"
+												viewBox="0 0 24 24">
+												<path
+													d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+												<path d="M9 22V12h6v10" />
+											</svg>
+										</span>
+										<span>Manager Dashboard</span>
+									</a>
+								</li>
+							</ul>
+						</nav>
+						<div class="">
+							<img src="/assets/img/iqconnect.png" alt="" class="h-5" />
+						</div>
+					</div>
+				</div>
+			</header>
+
+			<!-- Main -->
+			<main
+				class="relative z-20 flex h-full flex-1 flex-col overflow-y-auto overflow-x-hidden rounded-3xl rounded-t-2xl bg-slate-50 p-5 lg:rounded-s-[3rem] lg:rounded-tr-none lg:p-12 2xl:p-16">
+				<!-- Tab buttons -->
+				<div class="border-b border-gray-200">
+					<nav class="flex space-x-4 lg:space-x-8" aria-label="Tabs" role="tablist">
+						<button
+							type="button"
+							class="active inline-flex items-center gap-x-2 whitespace-nowrap border-b-2 border-transparent px-1 py-4 font-medium text-primary/40 transition hover:text-primary focus:text-secondary focus:outline-none disabled:pointer-events-none disabled:opacity-50 hs-tab-active:border-secondary hs-tab-active:text-secondary"
+							id="todays-stats-tab-btn"
+							data-hs-tab="#todays-stats-tab"
+							aria-controls="todays-stats-tab"
+							role="tab">
+							Today's Stats
+						</button>
+						<button
+							type="button"
+							class="inline-flex items-center gap-x-2 whitespace-nowrap border-b-2 border-transparent px-1 py-4 font-medium text-primary/40 transition hover:text-primary focus:text-secondary focus:outline-none disabled:pointer-events-none disabled:opacity-50 hs-tab-active:border-secondary hs-tab-active:text-secondary"
+							id="this-week-tab-btn"
+							data-hs-tab="#this-week-tab"
+							aria-controls="this-week-tab"
+							role="tab">
+							This Week
+						</button>
+						<button
+							type="button"
+							class="inline-flex items-center gap-x-2 whitespace-nowrap border-b-2 border-transparent px-1 py-4 font-medium text-primary/40 transition hover:text-primary focus:text-secondary focus:outline-none disabled:pointer-events-none disabled:opacity-50 hs-tab-active:border-secondary hs-tab-active:text-secondary"
+							id="this-month-tab-btn"
+							data-hs-tab="#this-month-tab"
+							aria-controls="this-month-tab"
+							role="tab">
+							This Month
+						</button>
+					</nav>
+				</div>
+
+				<!-- Tab contents -->
+				<div class="mt-8 flex-1">
+					<div
+						id="todays-stats-tab"
+						role="tabpanel"
+						aria-labelledby="todays-stats-tab-btn">
+						<div class="">
+							<div
+								class="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-2 2xl:grid-cols-4">
+								<!-- card 1 -->
+								<div class="rounded-xl bg-secondary/10 p-5 2xl:col-span-2">
+									<div
+										class="flex flex-wrap items-center justify-between gap-2 border-b-[3px] border-secondary/20 pb-2">
+										<div
+											class="relative flex items-center gap-2 before:absolute before:-bottom-[11px] before:left-0 before:h-[3px] before:w-[calc(100%+.5rem)] before:bg-secondary">
+											<span class="rounded-lg bg-accent-1 p-1 text-primary">
+												<svg
+													xmlns="http://www.w3.org/2000/svg"
+													fill="currentColor"
+													viewBox="0 0 17 19"
+													class="h-5 w-5">
+													<path
+														d="M15.349 1.395h-2.093V.698a.698.698 0 0 0-1.396 0v.697H4.885V.698a.698.698 0 1 0-1.396 0v.697H1.395A1.395 1.395 0 0 0 0 2.791v13.953a1.395 1.395 0 0 0 1.395 1.396H15.35a1.395 1.395 0 0 0 1.395-1.396V2.791a1.395 1.395 0 0 0-1.395-1.396ZM3.489 2.791v.697a.698.698 0 0 0 1.395 0v-.697h6.976v.697a.698.698 0 0 0 1.396 0v-.697h2.093v2.79H1.395v-2.79h2.093Zm11.86 13.953H1.395V6.977H15.35v9.767ZM6.977 9.07v5.581a.698.698 0 1 1-1.396 0v-4.453l-.385.194a.698.698 0 1 1-.624-1.249l1.395-.698a.698.698 0 0 1 1.01.625Zm5.159 2.655-1.67 2.229h1.395a.698.698 0 0 1 0 1.395H9.07a.697.697 0 0 1-.558-1.116l2.51-3.347a.697.697 0 1 0-1.161-.77.697.697 0 1 1-1.208-.697 2.093 2.093 0 1 1 3.483 2.306Z" />
+												</svg>
+											</span>
+											<h6 class="text-base font-medium">Appointments</h6>
+										</div>
+
+										<div
+											class="flex items-center gap-px text-sm font-medium text-primary">
+											<span class="">
+												<svg
+													xmlns="http://www.w3.org/2000/svg"
+													fill="currentColor"
+													viewBox="0 0 21 21"
+													class="h-4 w-4">
+													<path
+														d="M10.072 0a10.072 10.072 0 1 0 10.072 10.072A10.082 10.082 0 0 0 10.072 0Zm0 18.594a8.522 8.522 0 1 1 8.522-8.522 8.532 8.532 0 0 1-8.522 8.522Zm3.647-9.845a.774.774 0 1 1-1.096 1.096l-1.776-1.777v5.877a.775.775 0 1 1-1.55 0V8.069L7.521 9.845A.775.775 0 1 1 6.425 8.75l3.099-3.1a.775.775 0 0 1 1.096 0l3.099 3.1Z" />
+												</svg>
+											</span>
+											<span class=""> +5% </span>
+										</div>
+									</div>
+
+									<div class="px-4 py-6 lg:p-8">
+										<h2 class="text-5xl font-medium lg:text-8xl">15</h2>
+									</div>
+
+									<div class="">
+										<div
+											class="mb-2 flex flex-wrap justify-between gap-4 text-sm font-medium text-primary">
+											<p class="font-semibold">Progress Tracker</p>
+											<p>
+												<span class="font-medium text-secondary">
+													25%
+												</span>
+												to goal
+											</p>
+										</div>
+
+										<div
+											class="flex h-5 w-full overflow-hidden bg-secondary/10"
+											role="progressbar"
+											aria-valuenow="25"
+											aria-valuemin="0"
+											aria-valuemax="100">
+											<div
+												data-aos="fade-right"
+												class="flex flex-col justify-center overflow-hidden whitespace-nowrap bg-[#f4b610] text-center text-xs text-white transition delay-100 duration-500"
+												style="width: 25%"></div>
+										</div>
+									</div>
+								</div>
+
+								<div class="grid gap-5">
+									<!-- card 2 -->
+									<div class="rounded-xl bg-secondary/10 p-5">
+										<div
+											class="flex flex-wrap items-center justify-between gap-2 border-b-[3px] border-secondary/20 pb-2">
+											<div
+												class="relative flex items-center gap-2 before:absolute before:-bottom-[11px] before:left-0 before:h-[3px] before:w-[calc(100%+.5rem)] before:bg-secondary">
+												<span
+													class="rounded-lg bg-accent-1 p-1 text-primary">
+													<svg
+														xmlns="http://www.w3.org/2000/svg"
+														fill="currentColor"
+														viewBox="0 0 16 16"
+														class="h-5 w-5">
+														<path
+															d="M9.725 6.173a.636.636 0 0 1 0-.9l2.731-2.73h-1.645a.636.636 0 0 1 0-1.271h3.18a.636.636 0 0 1 .636.636v3.18a.636.636 0 0 1-1.272 0V3.443l-2.73 2.73a.636.636 0 0 1-.9 0Zm6.164 5.837a4.472 4.472 0 0 1-4.442 3.889C5.135 15.899 0 10.763 0 4.452A4.472 4.472 0 0 1 3.889.009 1.272 1.272 0 0 1 5.21.765l1.679 3.75v.009a1.272 1.272 0 0 1-.146 1.26L5.088 7.748c.595 1.21 1.86 2.464 3.086 3.06l1.935-1.645a1.267 1.267 0 0 1 1.266-.156l.01.005 3.745 1.678a1.272 1.272 0 0 1 .76 1.32Zm-1.262-.16h-.009l-3.736-1.673-1.936 1.647a1.272 1.272 0 0 1-1.31.135c-1.49-.72-2.974-2.192-3.694-3.665a1.272 1.272 0 0 1 .125-1.31L5.724 5.02l-1.67-3.736v-.01a3.196 3.196 0 0 0-2.782 3.178 10.186 10.186 0 0 0 10.175 10.175 3.196 3.196 0 0 0 3.18-2.777Z" />
+													</svg>
+												</span>
+												<h6 class="text-base font-medium">Dials</h6>
+											</div>
+
+											<div
+												class="flex items-center gap-px text-sm font-medium text-primary">
+												<span class="">
+													<svg
+														xmlns="http://www.w3.org/2000/svg"
+														fill="currentColor"
+														viewBox="0 0 21 21"
+														class="h-4 w-4">
+														<path
+															d="M10.072 0a10.072 10.072 0 1 0 10.072 10.072A10.082 10.082 0 0 0 10.072 0Zm0 18.594a8.522 8.522 0 1 1 8.522-8.522 8.532 8.532 0 0 1-8.522 8.522Zm3.647-9.845a.774.774 0 1 1-1.096 1.096l-1.776-1.777v5.877a.775.775 0 1 1-1.55 0V8.069L7.521 9.845A.775.775 0 1 1 6.425 8.75l3.099-3.1a.775.775 0 0 1 1.096 0l3.099 3.1Z" />
+													</svg>
+												</span>
+												<span class=""> +7% </span>
+											</div>
+										</div>
+
+										<div class="px-4 pt-3 lg:px-8">
+											<h2 class="text-5xl font-medium">50</h2>
+										</div>
+									</div>
+
+									<!-- card 3 -->
+									<div class="rounded-xl bg-secondary/10 p-5">
+										<div
+											class="flex flex-wrap items-center justify-between gap-2 border-b-[3px] border-secondary/20 pb-2">
+											<div
+												class="relative flex items-center gap-2 before:absolute before:-bottom-[11px] before:left-0 before:h-[3px] before:w-[calc(100%+.5rem)] before:bg-secondary">
+												<span
+													class="rounded-lg bg-accent-1 p-1 text-primary">
+													<svg
+														xmlns="http://www.w3.org/2000/svg"
+														fill="currentColor"
+														viewBox="0 0 16 16"
+														class="h-5 w-5">
+														<path
+															d="M15.133 10.689 11.387 9.01l-.01-.005a1.272 1.272 0 0 0-1.265.156l-1.935 1.65C6.952 10.215 5.686 8.96 5.09 7.75l1.652-1.965a1.272 1.272 0 0 0 .15-1.258v-.01L5.21.768a1.272 1.272 0 0 0-1.32-.76A4.472 4.472 0 0 0 0 4.452c0 6.311 5.135 11.447 11.447 11.447a4.473 4.473 0 0 0 4.442-3.89 1.272 1.272 0 0 0-.756-1.32Zm-3.686 3.938A10.187 10.187 0 0 1 1.272 4.452a3.196 3.196 0 0 1 2.772-3.18v.01l1.67 3.736L4.07 6.984a1.272 1.272 0 0 0-.125 1.31c.72 1.473 2.205 2.945 3.694 3.665a1.274 1.274 0 0 0 1.252-.09.544.544 0 0 0 .058-.046l1.933-1.648 3.736 1.674h.009a3.196 3.196 0 0 1-3.18 2.778ZM8.903 3.816a.636.636 0 0 1 .636-.636h1.908V1.272a.636.636 0 0 1 1.272 0V3.18h1.908a.636.636 0 1 1 0 1.272h-1.908v1.907a.636.636 0 1 1-1.272 0V4.452H9.54a.636.636 0 0 1-.636-.636Z" />
+													</svg>
+												</span>
+												<h6 class="text-base font-medium">Reaches</h6>
+											</div>
+
+											<div
+												class="flex items-center gap-px text-sm font-medium text-primary">
+												<span class="">
+													<svg
+														xmlns="http://www.w3.org/2000/svg"
+														fill="currentColor"
+														viewBox="0 0 21 21"
+														class="h-4 w-4">
+														<path
+															d="M10.072 0a10.072 10.072 0 1 0 10.072 10.072A10.082 10.082 0 0 0 10.072 0Zm0 18.594a8.522 8.522 0 1 1 8.522-8.522 8.532 8.532 0 0 1-8.522 8.522Zm3.647-9.845a.774.774 0 1 1-1.096 1.096l-1.776-1.777v5.877a.775.775 0 1 1-1.55 0V8.069L7.521 9.845A.775.775 0 1 1 6.425 8.75l3.099-3.1a.775.775 0 0 1 1.096 0l3.099 3.1Z" />
+													</svg>
+												</span>
+												<span class=""> +3% </span>
+											</div>
+										</div>
+
+										<div class="px-4 pt-3 lg:px-8">
+											<h2 class="text-5xl font-medium">30</h2>
+										</div>
+									</div>
+								</div>
+
+								<div class="grid gap-5">
+									<!-- card 4 -->
+									<div class="rounded-xl bg-secondary/10 p-5">
+										<div
+											class="flex flex-wrap items-center justify-between gap-2 border-b-[3px] border-secondary/20 pb-2">
+											<div
+												class="relative flex items-center gap-2 before:absolute before:-bottom-[11px] before:left-0 before:h-[3px] before:w-[calc(100%+.5rem)] before:bg-secondary">
+												<span
+													class="rounded-lg bg-accent-1 p-1 text-primary">
+													<svg
+														xmlns="http://www.w3.org/2000/svg"
+														fill="currentColor"
+														viewBox="0 0 18 18"
+														class="h-5 w-5">
+														<path
+															d="M12.461 6.23v4.155a.692.692 0 1 1-1.384 0V7.902L6.72 12.259a.691.691 0 0 1-1.183-.49.693.693 0 0 1 .203-.49l4.357-4.356H7.615a.692.692 0 1 1 0-1.385h4.154a.693.693 0 0 1 .692.693ZM18 9a9 9 0 1 1-9-9 9.01 9.01 0 0 1 9 9Zm-1.385 0A7.615 7.615 0 1 0 9 16.615 7.625 7.625 0 0 0 16.615 9Z" />
+													</svg>
+												</span>
+												<h6 class="text-base font-medium">
+													Connection Rate
+												</h6>
+											</div>
+
+											<div
+												class="flex items-center gap-px text-sm font-medium text-primary">
+												<span class="">
+													<svg
+														xmlns="http://www.w3.org/2000/svg"
+														fill="currentColor"
+														viewBox="0 0 21 21"
+														class="h-4 w-4">
+														<path
+															d="M10.072 0a10.072 10.072 0 1 0 10.072 10.072A10.082 10.082 0 0 0 10.072 0Zm0 18.594a8.522 8.522 0 1 1 8.522-8.522 8.532 8.532 0 0 1-8.522 8.522Zm3.647-9.845a.774.774 0 1 1-1.096 1.096l-1.776-1.777v5.877a.775.775 0 1 1-1.55 0V8.069L7.521 9.845A.775.775 0 1 1 6.425 8.75l3.099-3.1a.775.775 0 0 1 1.096 0l3.099 3.1Z" />
+													</svg>
+												</span>
+												<span class=""> +12% </span>
+											</div>
+										</div>
+
+										<div class="px-4 pt-4 lg:px-8">
+											<h2 class="text-5xl font-medium">60%</h2>
+										</div>
+									</div>
+
+									<!-- card 5 -->
+									<div class="rounded-xl bg-secondary/10 p-5">
+										<div
+											class="flex flex-wrap items-center justify-between gap-2 border-b-[3px] border-secondary/20 pb-2">
+											<div
+												class="relative flex items-center gap-2 before:absolute before:-bottom-[11px] before:left-0 before:h-[3px] before:w-[calc(100%+.5rem)] before:bg-secondary">
+												<span
+													class="rounded-lg bg-accent-1 p-1 text-primary">
+													<svg
+														xmlns="http://www.w3.org/2000/svg"
+														fill="currentColor"
+														viewBox="0 0 16 16"
+														class="h-5 w-5">
+														<path
+															d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16" />
+														<path
+															d="m10.97 4.97-.02.022-3.473 4.425-2.093-2.094a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05" />
+													</svg>
+												</span>
+												<h6 class="text-base font-medium">
+													Conversion Rate
+												</h6>
+											</div>
+
+											<div
+												class="flex items-center gap-px text-sm font-medium text-primary">
+												<span class="">
+													<svg
+														xmlns="http://www.w3.org/2000/svg"
+														fill="currentColor"
+														viewBox="0 0 21 21"
+														class="h-4 w-4">
+														<path
+															d="M10.072 0a10.072 10.072 0 1 0 10.072 10.072A10.082 10.082 0 0 0 10.072 0Zm0 18.594a8.522 8.522 0 1 1 8.522-8.522 8.532 8.532 0 0 1-8.522 8.522Zm3.647-9.845a.774.774 0 1 1-1.096 1.096l-1.776-1.777v5.877a.775.775 0 1 1-1.55 0V8.069L7.521 9.845A.775.775 0 1 1 6.425 8.75l3.099-3.1a.775.775 0 0 1 1.096 0l3.099 3.1Z" />
+													</svg>
+												</span>
+												<span class=""> +12% </span>
+											</div>
+										</div>
+
+										<div class="px-4 pt-4 lg:px-8">
+											<h2 class="text-5xl font-medium">60%</h2>
+										</div>
+									</div>
+								</div>
+
+								<!-- card 6 -->
+								<div class="rounded-xl bg-secondary/10 p-5 2xl:col-span-3">
+									<div
+										class="flex flex-wrap items-center justify-between gap-2 border-b-[3px] border-secondary/20 pb-2">
+										<div
+											class="relative flex items-center gap-2 before:absolute before:-bottom-[11px] before:left-0 before:h-[3px] before:w-[calc(100%+.5rem)] before:bg-secondary">
+											<span class="rounded-lg bg-accent-1 p-1 text-primary">
+												<svg
+													xmlns="http://www.w3.org/2000/svg"
+													fill="currentColor"
+													viewBox="0 0 16 18"
+													class="h-5 w-5">
+													<path
+														d="M15.604 4.38a.636.636 0 0 1-.857-.271 7.482 7.482 0 0 0-2.66-2.935.638.638 0 0 1-.028-1.057.636.636 0 0 1 .707-.019 8.86 8.86 0 0 1 3.11 3.426.636.636 0 0 1-.272.856ZM.636 4.452a.636.636 0 0 0 .564-.343 7.483 7.483 0 0 1 2.66-2.935.636.636 0 1 0-.679-1.076 8.86 8.86 0 0 0-3.11 3.426.636.636 0 0 0 .565.928Zm14.794 8.263a1.272 1.272 0 0 1-1.098 1.912h-3.244a3.18 3.18 0 0 1-6.232 0H1.613a1.272 1.272 0 0 1-1.097-1.912c.717-1.236 1.097-2.994 1.097-5.083a6.36 6.36 0 1 1 12.719 0c0 2.088.38 3.846 1.098 5.083Zm-5.66 1.912H6.174a1.908 1.908 0 0 0 3.596 0Zm4.562-1.272c-.846-1.452-1.272-3.377-1.272-5.723a5.088 5.088 0 1 0-10.175 0c0 2.346-.428 4.272-1.272 5.723h12.719Z" />
+												</svg>
+											</span>
+											<h6 class="text-base font-medium">Dial Outcomes</h6>
+										</div>
+									</div>
+
+									<div class="pt-6 lg:pb-4">
+										<div
+											class="grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-6 xl:gap-20">
+											<div class="space-y-4">
+												<div class="">
+													<div
+														class="mb-1.5 flex flex-wrap items-center justify-between gap-2">
+														<div class="">
+															<h6 class="text-sm font-medium">
+																Appointment
+															</h6>
+														</div>
+														<p class="text-2xl font-semibold">3</p>
+													</div>
+													<div
+														class="flex h-1.5 w-full overflow-hidden bg-secondary/15"
+														role="progressbar"
+														aria-valuenow="40"
+														aria-valuemin="0"
+														aria-valuemax="100">
+														<div
+															data-aos="fade-right"
+															class="flex flex-col justify-center overflow-hidden whitespace-nowrap bg-secondary text-center text-xs text-white transition duration-500"
+															style="width: 40%"></div>
+													</div>
+												</div>
+
+												<div class="">
+													<div
+														class="mb-1.5 flex flex-wrap items-center justify-between gap-2">
+														<div class="">
+															<h6 class="text-sm font-medium">
+																Callback
+															</h6>
+														</div>
+														<p class="text-2xl font-semibold">4</p>
+													</div>
+													<div
+														class="flex h-1.5 w-full overflow-hidden bg-secondary/15"
+														role="progressbar"
+														aria-valuenow="25"
+														aria-valuemin="0"
+														aria-valuemax="100">
+														<div
+															data-aos="fade-right"
+															class="flex flex-col justify-center overflow-hidden whitespace-nowrap bg-secondary text-center text-xs text-white transition duration-500"
+															style="width: 25%"></div>
+													</div>
+												</div>
+
+												<div class="">
+													<div
+														class="mb-1.5 flex flex-wrap items-center justify-between gap-2">
+														<div class="">
+															<h6 class="text-sm font-medium">
+																Email
+															</h6>
+														</div>
+														<p class="text-2xl font-semibold">2</p>
+													</div>
+													<div
+														class="flex h-1.5 w-full overflow-hidden bg-secondary/15"
+														role="progressbar"
+														aria-valuenow="15"
+														aria-valuemin="0"
+														aria-valuemax="100">
+														<div
+															data-aos="fade-right"
+															class="flex flex-col justify-center overflow-hidden whitespace-nowrap bg-secondary text-center text-xs text-white transition duration-500"
+															style="width: 15%"></div>
+													</div>
+												</div>
+
+												<div class="">
+													<div
+														class="mb-1.5 flex flex-wrap items-center justify-between gap-2">
+														<div class="">
+															<h6 class="text-sm font-medium">
+																Referral
+															</h6>
+														</div>
+														<p class="text-2xl font-semibold">5</p>
+													</div>
+													<div
+														class="flex h-1.5 w-full overflow-hidden bg-secondary/15"
+														role="progressbar"
+														aria-valuenow="33"
+														aria-valuemin="0"
+														aria-valuemax="100">
+														<div
+															data-aos="fade-right"
+															class="flex flex-col justify-center overflow-hidden whitespace-nowrap bg-secondary text-center text-xs text-white transition duration-500"
+															style="width: 33%"></div>
+													</div>
+												</div>
+											</div>
+											<div class="space-y-4">
+												<div class="">
+													<div
+														class="mb-1.5 flex flex-wrap items-center justify-between gap-2">
+														<div class="">
+															<h6 class="text-sm font-medium">
+																Hung Up
+															</h6>
+														</div>
+														<p class="text-2xl font-semibold">6</p>
+													</div>
+													<div
+														class="flex h-1.5 w-full overflow-hidden bg-secondary/15"
+														role="progressbar"
+														aria-valuenow="50"
+														aria-valuemin="0"
+														aria-valuemax="100">
+														<div
+															data-aos="fade-right"
+															class="flex flex-col justify-center overflow-hidden whitespace-nowrap bg-secondary text-center text-xs text-white transition duration-500"
+															style="width: 50%"></div>
+													</div>
+												</div>
+
+												<div class="">
+													<div
+														class="mb-1.5 flex flex-wrap items-center justify-between gap-2">
+														<div class="">
+															<h6 class="text-sm font-medium">
+																Not Interested
+															</h6>
+														</div>
+														<p class="text-2xl font-semibold">4</p>
+													</div>
+													<div
+														class="flex h-1.5 w-full overflow-hidden bg-secondary/15"
+														role="progressbar"
+														aria-valuenow="30"
+														aria-valuemin="0"
+														aria-valuemax="100">
+														<div
+															data-aos="fade-right"
+															class="flex flex-col justify-center overflow-hidden whitespace-nowrap bg-secondary text-center text-xs text-white transition duration-500"
+															style="width: 30%"></div>
+													</div>
+												</div>
+
+												<div class="">
+													<div
+														class="mb-1.5 flex flex-wrap items-center justify-between gap-2">
+														<div class="">
+															<h6 class="text-sm font-medium">
+																No Answer
+															</h6>
+														</div>
+														<p class="text-2xl font-semibold">3</p>
+													</div>
+													<div
+														class="flex h-1.5 w-full overflow-hidden bg-secondary/15"
+														role="progressbar"
+														aria-valuenow="40"
+														aria-valuemin="0"
+														aria-valuemax="100">
+														<div
+															data-aos="fade-right"
+															class="flex flex-col justify-center overflow-hidden whitespace-nowrap bg-secondary text-center text-xs text-white transition duration-500"
+															style="width: 40%"></div>
+													</div>
+												</div>
+
+												<div class="">
+													<div
+														class="mb-1.5 flex flex-wrap items-center justify-between gap-2">
+														<div class="">
+															<h6 class="text-sm font-medium">
+																Discard
+															</h6>
+														</div>
+														<p class="text-2xl font-semibold">3</p>
+													</div>
+													<div
+														class="flex h-1.5 w-full overflow-hidden bg-secondary/15"
+														role="progressbar"
+														aria-valuenow="40"
+														aria-valuemin="0"
+														aria-valuemax="100">
+														<div
+															data-aos="fade-right"
+															class="flex flex-col justify-center overflow-hidden whitespace-nowrap bg-secondary text-center text-xs text-white transition duration-500"
+															style="width: 40%"></div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<!-- card 7 -->
+								<div class="rounded-xl bg-secondary/10 p-5">
+									<div
+										class="flex flex-wrap items-center justify-between gap-2 border-b-[3px] border-secondary/20 pb-2">
+										<div
+											class="relative flex items-center gap-2 before:absolute before:-bottom-[11px] before:left-0 before:h-[3px] before:w-[calc(100%+.5rem)] before:bg-secondary">
+											<span class="rounded-lg bg-accent-1 p-1 text-primary">
+												<svg
+													xmlns="http://www.w3.org/2000/svg"
+													viewBox="0 0 256 256"
+													fill="currentColor"
+													class="h-5 w-5">
+													<path
+														d="M244.8 150.4a8 8 0 0 1-11.2-1.6A51.6 51.6 0 0 0 192 128a8 8 0 0 1-7.37-4.89 8 8 0 0 1 0-6.22A8 8 0 0 1 192 112a24 24 0 1 0-23.24-30 8 8 0 1 1-15.5-4A40 40 0 1 1 219 117.51a67.94 67.94 0 0 1 27.43 21.68 8 8 0 0 1-1.63 11.21ZM190.92 212a8 8 0 1 1-13.84 8 57 57 0 0 0-98.16 0 8 8 0 1 1-13.84-8 72.06 72.06 0 0 1 33.74-29.92 48 48 0 1 1 58.36 0A72.06 72.06 0 0 1 190.92 212ZM128 176a32 32 0 1 0-32-32 32 32 0 0 0 32 32Zm-56-56a8 8 0 0 0-8-8 24 24 0 1 1 23.24-30 8 8 0 1 0 15.5-4A40 40 0 1 0 37 117.51a67.94 67.94 0 0 0-27.4 21.68 8 8 0 1 0 12.8 9.61A51.6 51.6 0 0 1 64 128a8 8 0 0 0 8-8Z" />
+												</svg>
+											</span>
+											<h6 class="text-base font-medium">Team</h6>
+										</div>
+									</div>
+
+									<div class="team-slider-container mt-6">
+										<div class="team-slider">
+											<div class="">
+												<div
+													class="group relative flex flex-wrap items-center gap-2 p-2">
+													<div
+														class="h-12 w-12 overflow-hidden rounded-full transition group-hover:ring group-hover:ring-secondary/20">
+														<img
+															src="/assets/img/avatar-1.png"
+															alt=""
+															class="h-full w-full rounded-full object-cover" />
+													</div>
+													<div class="">
+														<h6 class="text-sm font-medium">John J.</h6>
+														<a
+															href="/"
+															class="block text-xs text-gray-600 transition after:absolute after:inset-0 after:h-full after:w-full after:content-[''] hover:text-secondary">
+															See personal stats
+														</a>
+													</div>
+												</div>
+
+												<div
+													class="group relative flex flex-wrap items-center gap-2 p-2">
+													<div
+														class="h-12 w-12 overflow-hidden rounded-full transition group-hover:ring group-hover:ring-secondary/20">
+														<img
+															src="/assets/img/avatar-2.png"
+															alt=""
+															class="h-full w-full rounded-full object-cover" />
+													</div>
+													<div class="">
+														<h6 class="text-sm font-medium">Abby A.</h6>
+														<a
+															href="/"
+															class="block text-xs text-gray-600 transition after:absolute after:inset-0 after:h-full after:w-full after:content-[''] hover:text-secondary">
+															See personal stats
+														</a>
+													</div>
+												</div>
+
+												<div
+													class="group relative flex flex-wrap items-center gap-2 p-2">
+													<div
+														class="h-12 w-12 overflow-hidden rounded-full transition group-hover:ring group-hover:ring-secondary/20">
+														<img
+															src="/assets/img/avatar-3.png"
+															alt=""
+															class="h-full w-full rounded-full object-cover" />
+													</div>
+													<div class="">
+														<h6 class="text-sm font-medium">Paul P.</h6>
+														<a
+															href="/"
+															class="block text-xs text-gray-600 transition after:absolute after:inset-0 after:h-full after:w-full after:content-[''] hover:text-secondary">
+															See personal stats
+														</a>
+													</div>
+												</div>
+											</div>
+											<div class="">
+												<div
+													class="group relative flex flex-wrap items-center gap-2 p-2">
+													<div
+														class="h-12 w-12 overflow-hidden rounded-full transition group-hover:ring group-hover:ring-secondary/20">
+														<img
+															src="/assets/img/avatar-1.png"
+															alt=""
+															class="h-full w-full rounded-full object-cover" />
+													</div>
+													<div class="">
+														<h6 class="text-sm font-medium">John J.</h6>
+														<a
+															href="/"
+															class="block text-xs text-gray-600 transition after:absolute after:inset-0 after:h-full after:w-full after:content-[''] hover:text-secondary">
+															See personal stats
+														</a>
+													</div>
+												</div>
+
+												<div
+													class="group relative flex flex-wrap items-center gap-2 p-2">
+													<div
+														class="h-12 w-12 overflow-hidden rounded-full transition group-hover:ring group-hover:ring-secondary/20">
+														<img
+															src="/assets/img/avatar-2.png"
+															alt=""
+															class="h-full w-full rounded-full object-cover" />
+													</div>
+													<div class="">
+														<h6 class="text-sm font-medium">Abby A.</h6>
+														<a
+															href="/"
+															class="block text-xs text-gray-600 transition after:absolute after:inset-0 after:h-full after:w-full after:content-[''] hover:text-secondary">
+															See personal stats
+														</a>
+													</div>
+												</div>
+
+												<div
+													class="group relative flex flex-wrap items-center gap-2 p-2">
+													<div
+														class="h-12 w-12 overflow-hidden rounded-full transition group-hover:ring group-hover:ring-secondary/20">
+														<img
+															src="/assets/img/avatar-3.png"
+															alt=""
+															class="h-full w-full rounded-full object-cover" />
+													</div>
+													<div class="">
+														<h6 class="text-sm font-medium">Paul P.</h6>
+														<a
+															href="/"
+															class="block text-xs text-gray-600 transition after:absolute after:inset-0 after:h-full after:w-full after:content-[''] hover:text-secondary">
+															See personal stats
+														</a>
+													</div>
+												</div>
+											</div>
+											<div class="">
+												<div
+													class="group relative flex flex-wrap items-center gap-2 p-2">
+													<div
+														class="h-12 w-12 overflow-hidden rounded-full transition group-hover:ring group-hover:ring-secondary/20">
+														<img
+															src="/assets/img/avatar-1.png"
+															alt=""
+															class="h-full w-full rounded-full object-cover" />
+													</div>
+													<div class="">
+														<h6 class="text-sm font-medium">John J.</h6>
+														<a
+															href="/"
+															class="block text-xs text-gray-600 transition after:absolute after:inset-0 after:h-full after:w-full after:content-[''] hover:text-secondary">
+															See personal stats
+														</a>
+													</div>
+												</div>
+
+												<div
+													class="group relative flex flex-wrap items-center gap-2 p-2">
+													<div
+														class="h-12 w-12 overflow-hidden rounded-full transition group-hover:ring group-hover:ring-secondary/20">
+														<img
+															src="/assets/img/avatar-2.png"
+															alt=""
+															class="h-full w-full rounded-full object-cover" />
+													</div>
+													<div class="">
+														<h6 class="text-sm font-medium">Abby A.</h6>
+														<a
+															href="/"
+															class="block text-xs text-gray-600 transition after:absolute after:inset-0 after:h-full after:w-full after:content-[''] hover:text-secondary">
+															See personal stats
+														</a>
+													</div>
+												</div>
+
+												<div
+													class="group relative flex flex-wrap items-center gap-2 p-2">
+													<div
+														class="h-12 w-12 overflow-hidden rounded-full transition group-hover:ring group-hover:ring-secondary/20">
+														<img
+															src="/assets/img/avatar-3.png"
+															alt=""
+															class="h-full w-full rounded-full object-cover" />
+													</div>
+													<div class="">
+														<h6 class="text-sm font-medium">Paul P.</h6>
+														<a
+															href="/"
+															class="block text-xs text-gray-600 transition after:absolute after:inset-0 after:h-full after:w-full after:content-[''] hover:text-secondary">
+															See personal stats
+														</a>
+													</div>
+												</div>
+											</div>
+										</div>
+
+										<div
+											class="slider-controls mt-4 flex items-center justify-between">
+											<button
+												class="slider-prev flex h-8 w-8 items-center justify-center text-secondary/50 transition hover:text-secondary">
+												<svg
+													xmlns="http://www.w3.org/2000/svg"
+													width="16"
+													height="16"
+													fill="currentColor"
+													class="h-5 w-5"
+													viewBox="0 0 16 16">
+													<path
+														fill-rule="evenodd"
+														d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z" />
+												</svg>
+											</button>
+
+											<div
+												class="slider-navs flex items-center justify-center gap-2">
+												<button
+													class="block h-[3px] w-8 bg-secondary/50 transition"></button>
+												<button
+													class="block h-[3px] w-8 bg-secondary/50 transition"></button>
+												<button
+													class="block h-[3px] w-8 bg-secondary/50 transition"></button>
+											</div>
+
+											<button
+												class="slider-next flex h-8 w-8 items-center justify-center text-secondary/50 transition hover:text-secondary">
+												<svg
+													xmlns="http://www.w3.org/2000/svg"
+													width="16"
+													height="16"
+													fill="currentColor"
+													class="h-5 w-5"
+													viewBox="0 0 16 16">
+													<path
+														fill-rule="evenodd"
+														d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z" />
+												</svg>
+											</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div
+						id="this-week-tab"
+						class="hidden"
+						role="tabpanel"
+						aria-labelledby="this-week-tab-btn">
+						<div class="">
+							<div
+								class="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-2 2xl:grid-cols-4">
+								<!-- card 1 -->
+								<div class="rounded-xl bg-secondary/10 p-5 2xl:col-span-2">
+									<div
+										class="flex flex-wrap items-center justify-between gap-2 border-b-[3px] border-secondary/20 pb-2">
+										<div
+											class="relative flex items-center gap-2 before:absolute before:-bottom-[11px] before:left-0 before:h-[3px] before:w-[calc(100%+.5rem)] before:bg-secondary">
+											<span class="rounded-lg bg-accent-1 p-1 text-primary">
+												<svg
+													xmlns="http://www.w3.org/2000/svg"
+													fill="currentColor"
+													viewBox="0 0 17 19"
+													class="h-5 w-5">
+													<path
+														d="M15.349 1.395h-2.093V.698a.698.698 0 0 0-1.396 0v.697H4.885V.698a.698.698 0 1 0-1.396 0v.697H1.395A1.395 1.395 0 0 0 0 2.791v13.953a1.395 1.395 0 0 0 1.395 1.396H15.35a1.395 1.395 0 0 0 1.395-1.396V2.791a1.395 1.395 0 0 0-1.395-1.396ZM3.489 2.791v.697a.698.698 0 0 0 1.395 0v-.697h6.976v.697a.698.698 0 0 0 1.396 0v-.697h2.093v2.79H1.395v-2.79h2.093Zm11.86 13.953H1.395V6.977H15.35v9.767ZM6.977 9.07v5.581a.698.698 0 1 1-1.396 0v-4.453l-.385.194a.698.698 0 1 1-.624-1.249l1.395-.698a.698.698 0 0 1 1.01.625Zm5.159 2.655-1.67 2.229h1.395a.698.698 0 0 1 0 1.395H9.07a.697.697 0 0 1-.558-1.116l2.51-3.347a.697.697 0 1 0-1.161-.77.697.697 0 1 1-1.208-.697 2.093 2.093 0 1 1 3.483 2.306Z" />
+												</svg>
+											</span>
+											<h6 class="text-base font-medium">Appointments</h6>
+										</div>
+
+										<div
+											class="flex items-center gap-px text-sm font-medium text-primary">
+											<span class="">
+												<svg
+													xmlns="http://www.w3.org/2000/svg"
+													fill="currentColor"
+													viewBox="0 0 21 21"
+													class="h-4 w-4">
+													<path
+														d="M10.072 0a10.072 10.072 0 1 0 10.072 10.072A10.082 10.082 0 0 0 10.072 0Zm0 18.594a8.522 8.522 0 1 1 8.522-8.522 8.532 8.532 0 0 1-8.522 8.522Zm3.647-9.845a.774.774 0 1 1-1.096 1.096l-1.776-1.777v5.877a.775.775 0 1 1-1.55 0V8.069L7.521 9.845A.775.775 0 1 1 6.425 8.75l3.099-3.1a.775.775 0 0 1 1.096 0l3.099 3.1Z" />
+												</svg>
+											</span>
+											<span class=""> +5% </span>
+										</div>
+									</div>
+
+									<div class="px-4 py-6 lg:p-8">
+										<h2 class="text-5xl font-medium lg:text-8xl">30</h2>
+									</div>
+
+									<div class="">
+										<div
+											class="mb-2 flex flex-wrap justify-between gap-4 text-sm font-medium text-primary">
+											<p class="font-semibold">Progress Tracker</p>
+											<p>
+												<span class="font-medium text-secondary">
+													40%
+												</span>
+												to goal
+											</p>
+										</div>
+
+										<div
+											class="flex h-5 w-full overflow-hidden bg-secondary/15"
+											role="progressbar"
+											aria-valuenow="40"
+											aria-valuemin="0"
+											aria-valuemax="100">
+											<div
+												data-aos="fade-right"
+												class="flex flex-col justify-center overflow-hidden whitespace-nowrap bg-[#f4b610] text-center text-xs text-white transition duration-500"
+												style="width: 40%"></div>
+										</div>
+									</div>
+								</div>
+
+								<div class="grid gap-5">
+									<!-- card 2 -->
+									<div class="rounded-xl bg-secondary/10 p-5">
+										<div
+											class="flex flex-wrap items-center justify-between gap-2 border-b-[3px] border-secondary/20 pb-2">
+											<div
+												class="relative flex items-center gap-2 before:absolute before:-bottom-[11px] before:left-0 before:h-[3px] before:w-[calc(100%+.5rem)] before:bg-secondary">
+												<span
+													class="rounded-lg bg-accent-1 p-1 text-primary">
+													<svg
+														xmlns="http://www.w3.org/2000/svg"
+														fill="currentColor"
+														viewBox="0 0 16 16"
+														class="h-5 w-5">
+														<path
+															d="M9.725 6.173a.636.636 0 0 1 0-.9l2.731-2.73h-1.645a.636.636 0 0 1 0-1.271h3.18a.636.636 0 0 1 .636.636v3.18a.636.636 0 0 1-1.272 0V3.443l-2.73 2.73a.636.636 0 0 1-.9 0Zm6.164 5.837a4.472 4.472 0 0 1-4.442 3.889C5.135 15.899 0 10.763 0 4.452A4.472 4.472 0 0 1 3.889.009 1.272 1.272 0 0 1 5.21.765l1.679 3.75v.009a1.272 1.272 0 0 1-.146 1.26L5.088 7.748c.595 1.21 1.86 2.464 3.086 3.06l1.935-1.645a1.267 1.267 0 0 1 1.266-.156l.01.005 3.745 1.678a1.272 1.272 0 0 1 .76 1.32Zm-1.262-.16h-.009l-3.736-1.673-1.936 1.647a1.272 1.272 0 0 1-1.31.135c-1.49-.72-2.974-2.192-3.694-3.665a1.272 1.272 0 0 1 .125-1.31L5.724 5.02l-1.67-3.736v-.01a3.196 3.196 0 0 0-2.782 3.178 10.186 10.186 0 0 0 10.175 10.175 3.196 3.196 0 0 0 3.18-2.777Z" />
+													</svg>
+												</span>
+												<h6 class="text-base font-medium">Dials</h6>
+											</div>
+
+											<div
+												class="flex items-center gap-px text-sm font-medium text-primary">
+												<span class="">
+													<svg
+														xmlns="http://www.w3.org/2000/svg"
+														fill="currentColor"
+														viewBox="0 0 21 21"
+														class="h-4 w-4">
+														<path
+															d="M10.072 0a10.072 10.072 0 1 0 10.072 10.072A10.082 10.082 0 0 0 10.072 0Zm0 18.594a8.522 8.522 0 1 1 8.522-8.522 8.532 8.532 0 0 1-8.522 8.522Zm3.647-9.845a.774.774 0 1 1-1.096 1.096l-1.776-1.777v5.877a.775.775 0 1 1-1.55 0V8.069L7.521 9.845A.775.775 0 1 1 6.425 8.75l3.099-3.1a.775.775 0 0 1 1.096 0l3.099 3.1Z" />
+													</svg>
+												</span>
+												<span class=""> +7% </span>
+											</div>
+										</div>
+
+										<div class="px-4 pt-3 lg:px-8">
+											<h2 class="text-5xl font-medium">150</h2>
+										</div>
+									</div>
+
+									<!-- card 3 -->
+									<div class="rounded-xl bg-secondary/10 p-5">
+										<div
+											class="flex flex-wrap items-center justify-between gap-2 border-b-[3px] border-secondary/20 pb-2">
+											<div
+												class="relative flex items-center gap-2 before:absolute before:-bottom-[11px] before:left-0 before:h-[3px] before:w-[calc(100%+.5rem)] before:bg-secondary">
+												<span
+													class="rounded-lg bg-accent-1 p-1 text-primary">
+													<svg
+														xmlns="http://www.w3.org/2000/svg"
+														fill="currentColor"
+														viewBox="0 0 16 16"
+														class="h-5 w-5">
+														<path
+															d="M15.133 10.689 11.387 9.01l-.01-.005a1.272 1.272 0 0 0-1.265.156l-1.935 1.65C6.952 10.215 5.686 8.96 5.09 7.75l1.652-1.965a1.272 1.272 0 0 0 .15-1.258v-.01L5.21.768a1.272 1.272 0 0 0-1.32-.76A4.472 4.472 0 0 0 0 4.452c0 6.311 5.135 11.447 11.447 11.447a4.473 4.473 0 0 0 4.442-3.89 1.272 1.272 0 0 0-.756-1.32Zm-3.686 3.938A10.187 10.187 0 0 1 1.272 4.452a3.196 3.196 0 0 1 2.772-3.18v.01l1.67 3.736L4.07 6.984a1.272 1.272 0 0 0-.125 1.31c.72 1.473 2.205 2.945 3.694 3.665a1.274 1.274 0 0 0 1.252-.09.544.544 0 0 0 .058-.046l1.933-1.648 3.736 1.674h.009a3.196 3.196 0 0 1-3.18 2.778ZM8.903 3.816a.636.636 0 0 1 .636-.636h1.908V1.272a.636.636 0 0 1 1.272 0V3.18h1.908a.636.636 0 1 1 0 1.272h-1.908v1.907a.636.636 0 1 1-1.272 0V4.452H9.54a.636.636 0 0 1-.636-.636Z" />
+													</svg>
+												</span>
+												<h6 class="text-base font-medium">Reaches</h6>
+											</div>
+
+											<div
+												class="flex items-center gap-px text-sm font-medium text-primary">
+												<span class="">
+													<svg
+														xmlns="http://www.w3.org/2000/svg"
+														fill="currentColor"
+														viewBox="0 0 21 21"
+														class="h-4 w-4">
+														<path
+															d="M10.072 0a10.072 10.072 0 1 0 10.072 10.072A10.082 10.082 0 0 0 10.072 0Zm0 18.594a8.522 8.522 0 1 1 8.522-8.522 8.532 8.532 0 0 1-8.522 8.522Zm3.647-9.845a.774.774 0 1 1-1.096 1.096l-1.776-1.777v5.877a.775.775 0 1 1-1.55 0V8.069L7.521 9.845A.775.775 0 1 1 6.425 8.75l3.099-3.1a.775.775 0 0 1 1.096 0l3.099 3.1Z" />
+													</svg>
+												</span>
+												<span class=""> +3% </span>
+											</div>
+										</div>
+
+										<div class="px-4 pt-3 lg:px-8">
+											<h2 class="text-5xl font-medium">60</h2>
+										</div>
+									</div>
+								</div>
+
+								<div class="grid gap-5">
+									<!-- card 4 -->
+									<div class="rounded-xl bg-secondary/10 p-5">
+										<div
+											class="flex flex-wrap items-center justify-between gap-2 border-b-[3px] border-secondary/20 pb-2">
+											<div
+												class="relative flex items-center gap-2 before:absolute before:-bottom-[11px] before:left-0 before:h-[3px] before:w-[calc(100%+.5rem)] before:bg-secondary">
+												<span
+													class="rounded-lg bg-accent-1 p-1 text-primary">
+													<svg
+														xmlns="http://www.w3.org/2000/svg"
+														fill="currentColor"
+														viewBox="0 0 18 18"
+														class="h-5 w-5">
+														<path
+															d="M12.461 6.23v4.155a.692.692 0 1 1-1.384 0V7.902L6.72 12.259a.691.691 0 0 1-1.183-.49.693.693 0 0 1 .203-.49l4.357-4.356H7.615a.692.692 0 1 1 0-1.385h4.154a.693.693 0 0 1 .692.693ZM18 9a9 9 0 1 1-9-9 9.01 9.01 0 0 1 9 9Zm-1.385 0A7.615 7.615 0 1 0 9 16.615 7.625 7.625 0 0 0 16.615 9Z" />
+													</svg>
+												</span>
+												<h6 class="text-base font-medium">
+													Connection Rate
+												</h6>
+											</div>
+
+											<div
+												class="flex items-center gap-px text-sm font-medium text-primary">
+												<span class="">
+													<svg
+														xmlns="http://www.w3.org/2000/svg"
+														fill="currentColor"
+														viewBox="0 0 21 21"
+														class="h-4 w-4">
+														<path
+															d="M10.072 0a10.072 10.072 0 1 0 10.072 10.072A10.082 10.082 0 0 0 10.072 0Zm0 18.594a8.522 8.522 0 1 1 8.522-8.522 8.532 8.532 0 0 1-8.522 8.522Zm3.647-9.845a.774.774 0 1 1-1.096 1.096l-1.776-1.777v5.877a.775.775 0 1 1-1.55 0V8.069L7.521 9.845A.775.775 0 1 1 6.425 8.75l3.099-3.1a.775.775 0 0 1 1.096 0l3.099 3.1Z" />
+													</svg>
+												</span>
+												<span class=""> +12% </span>
+											</div>
+										</div>
+
+										<div class="px-4 pt-4 lg:px-8">
+											<h2 class="text-5xl font-medium">70%</h2>
+										</div>
+									</div>
+
+									<!-- card 5 -->
+									<div class="rounded-xl bg-secondary/10 p-5">
+										<div
+											class="flex flex-wrap items-center justify-between gap-2 border-b-[3px] border-secondary/20 pb-2">
+											<div
+												class="relative flex items-center gap-2 before:absolute before:-bottom-[11px] before:left-0 before:h-[3px] before:w-[calc(100%+.5rem)] before:bg-secondary">
+												<span
+													class="rounded-lg bg-accent-1 p-1 text-primary">
+													<svg
+														xmlns="http://www.w3.org/2000/svg"
+														fill="currentColor"
+														viewBox="0 0 16 16"
+														class="h-5 w-5">
+														<path
+															d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16" />
+														<path
+															d="m10.97 4.97-.02.022-3.473 4.425-2.093-2.094a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05" />
+													</svg>
+												</span>
+												<h6 class="text-base font-medium">
+													Conversion Rate
+												</h6>
+											</div>
+
+											<div
+												class="flex items-center gap-px text-sm font-medium text-primary">
+												<span class="">
+													<svg
+														xmlns="http://www.w3.org/2000/svg"
+														fill="currentColor"
+														viewBox="0 0 21 21"
+														class="h-4 w-4">
+														<path
+															d="M10.072 0a10.072 10.072 0 1 0 10.072 10.072A10.082 10.082 0 0 0 10.072 0Zm0 18.594a8.522 8.522 0 1 1 8.522-8.522 8.532 8.532 0 0 1-8.522 8.522Zm3.647-9.845a.774.774 0 1 1-1.096 1.096l-1.776-1.777v5.877a.775.775 0 1 1-1.55 0V8.069L7.521 9.845A.775.775 0 1 1 6.425 8.75l3.099-3.1a.775.775 0 0 1 1.096 0l3.099 3.1Z" />
+													</svg>
+												</span>
+												<span class=""> +12% </span>
+											</div>
+										</div>
+
+										<div class="px-4 pt-4 lg:px-8">
+											<h2 class="text-5xl font-medium">80%</h2>
+										</div>
+									</div>
+								</div>
+
+								<!-- card 6 -->
+								<div class="rounded-xl bg-secondary/10 p-5 2xl:col-span-3">
+									<div
+										class="flex flex-wrap items-center justify-between gap-2 border-b-[3px] border-secondary/20 pb-2">
+										<div
+											class="relative flex items-center gap-2 before:absolute before:-bottom-[11px] before:left-0 before:h-[3px] before:w-[calc(100%+.5rem)] before:bg-secondary">
+											<span class="rounded-lg bg-accent-1 p-1 text-primary">
+												<svg
+													xmlns="http://www.w3.org/2000/svg"
+													fill="currentColor"
+													viewBox="0 0 16 18"
+													class="h-5 w-5">
+													<path
+														d="M15.604 4.38a.636.636 0 0 1-.857-.271 7.482 7.482 0 0 0-2.66-2.935.638.638 0 0 1-.028-1.057.636.636 0 0 1 .707-.019 8.86 8.86 0 0 1 3.11 3.426.636.636 0 0 1-.272.856ZM.636 4.452a.636.636 0 0 0 .564-.343 7.483 7.483 0 0 1 2.66-2.935.636.636 0 1 0-.679-1.076 8.86 8.86 0 0 0-3.11 3.426.636.636 0 0 0 .565.928Zm14.794 8.263a1.272 1.272 0 0 1-1.098 1.912h-3.244a3.18 3.18 0 0 1-6.232 0H1.613a1.272 1.272 0 0 1-1.097-1.912c.717-1.236 1.097-2.994 1.097-5.083a6.36 6.36 0 1 1 12.719 0c0 2.088.38 3.846 1.098 5.083Zm-5.66 1.912H6.174a1.908 1.908 0 0 0 3.596 0Zm4.562-1.272c-.846-1.452-1.272-3.377-1.272-5.723a5.088 5.088 0 1 0-10.175 0c0 2.346-.428 4.272-1.272 5.723h12.719Z" />
+												</svg>
+											</span>
+											<h6 class="text-base font-medium">Dial Outcomes</h6>
+										</div>
+									</div>
+
+									<div class="pt-6 lg:pb-4">
+										<div
+											class="grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-6 xl:gap-20">
+											<div class="space-y-4">
+												<div class="">
+													<div
+														class="mb-1.5 flex flex-wrap items-center justify-between gap-2">
+														<div class="">
+															<h6 class="text-sm font-medium">
+																Appointment
+															</h6>
+														</div>
+														<p class="text-2xl font-semibold">11</p>
+													</div>
+													<div
+														class="flex h-1.5 w-full overflow-hidden bg-secondary/15"
+														role="progressbar"
+														aria-valuenow="50"
+														aria-valuemin="0"
+														aria-valuemax="100">
+														<div
+															data-aos="fade-right"
+															class="flex flex-col justify-center overflow-hidden whitespace-nowrap bg-secondary text-center text-xs text-white transition duration-500"
+															style="width: 50%"></div>
+													</div>
+												</div>
+
+												<div class="">
+													<div
+														class="mb-1.5 flex flex-wrap items-center justify-between gap-2">
+														<div class="">
+															<h6 class="text-sm font-medium">
+																Callback
+															</h6>
+														</div>
+														<p class="text-2xl font-semibold">13</p>
+													</div>
+													<div
+														class="flex h-1.5 w-full overflow-hidden bg-secondary/15"
+														role="progressbar"
+														aria-valuenow="33"
+														aria-valuemin="0"
+														aria-valuemax="100">
+														<div
+															data-aos="fade-right"
+															class="flex flex-col justify-center overflow-hidden whitespace-nowrap bg-secondary text-center text-xs text-white transition duration-500"
+															style="width: 33%"></div>
+													</div>
+												</div>
+
+												<div class="">
+													<div
+														class="mb-1.5 flex flex-wrap items-center justify-between gap-2">
+														<div class="">
+															<h6 class="text-sm font-medium">
+																Email
+															</h6>
+														</div>
+														<p class="text-2xl font-semibold">5</p>
+													</div>
+													<div
+														class="flex h-1.5 w-full overflow-hidden bg-secondary/15"
+														role="progressbar"
+														aria-valuenow="18"
+														aria-valuemin="0"
+														aria-valuemax="100">
+														<div
+															data-aos="fade-right"
+															class="flex flex-col justify-center overflow-hidden whitespace-nowrap bg-secondary text-center text-xs text-white transition duration-500"
+															style="width: 18%"></div>
+													</div>
+												</div>
+
+												<div class="">
+													<div
+														class="mb-1.5 flex flex-wrap items-center justify-between gap-2">
+														<div class="">
+															<h6 class="text-sm font-medium">
+																Referral
+															</h6>
+														</div>
+														<p class="text-2xl font-semibold">8</p>
+													</div>
+													<div
+														class="flex h-1.5 w-full overflow-hidden bg-secondary/15"
+														role="progressbar"
+														aria-valuenow="10"
+														aria-valuemin="0"
+														aria-valuemax="100">
+														<div
+															data-aos="fade-right"
+															class="flex flex-col justify-center overflow-hidden whitespace-nowrap bg-secondary text-center text-xs text-white transition duration-500"
+															style="width: 10%"></div>
+													</div>
+												</div>
+											</div>
+											<div class="space-y-4">
+												<div class="">
+													<div
+														class="mb-1.5 flex flex-wrap items-center justify-between gap-2">
+														<div class="">
+															<h6 class="text-sm font-medium">
+																Hung Up
+															</h6>
+														</div>
+														<p class="text-2xl font-semibold">17</p>
+													</div>
+													<div
+														class="flex h-1.5 w-full overflow-hidden bg-secondary/15"
+														role="progressbar"
+														aria-valuenow="60"
+														aria-valuemin="0"
+														aria-valuemax="100">
+														<div
+															data-aos="fade-right"
+															class="flex flex-col justify-center overflow-hidden whitespace-nowrap bg-secondary text-center text-xs text-white transition duration-500"
+															style="width: 60%"></div>
+													</div>
+												</div>
+
+												<div class="">
+													<div
+														class="mb-1.5 flex flex-wrap items-center justify-between gap-2">
+														<div class="">
+															<h6 class="text-sm font-medium">
+																Not Interested
+															</h6>
+														</div>
+														<p class="text-2xl font-semibold">21</p>
+													</div>
+													<div
+														class="flex h-1.5 w-full overflow-hidden bg-secondary/15"
+														role="progressbar"
+														aria-valuenow="70"
+														aria-valuemin="0"
+														aria-valuemax="100">
+														<div
+															data-aos="fade-right"
+															class="flex flex-col justify-center overflow-hidden whitespace-nowrap bg-secondary text-center text-xs text-white transition duration-500"
+															style="width: 70%"></div>
+													</div>
+												</div>
+
+												<div class="">
+													<div
+														class="mb-1.5 flex flex-wrap items-center justify-between gap-2">
+														<div class="">
+															<h6 class="text-sm font-medium">
+																No Answer
+															</h6>
+														</div>
+														<p class="text-2xl font-semibold">7</p>
+													</div>
+													<div
+														class="flex h-1.5 w-full overflow-hidden bg-secondary/15"
+														role="progressbar"
+														aria-valuenow="35"
+														aria-valuemin="0"
+														aria-valuemax="100">
+														<div
+															data-aos="fade-right"
+															class="flex flex-col justify-center overflow-hidden whitespace-nowrap bg-secondary text-center text-xs text-white transition duration-500"
+															style="width: 35%"></div>
+													</div>
+												</div>
+
+												<div class="">
+													<div
+														class="mb-1.5 flex flex-wrap items-center justify-between gap-2">
+														<div class="">
+															<h6 class="text-sm font-medium">
+																Discard
+															</h6>
+														</div>
+														<p class="text-2xl font-semibold">5</p>
+													</div>
+													<div
+														class="flex h-1.5 w-full overflow-hidden bg-secondary/15"
+														role="progressbar"
+														aria-valuenow="45"
+														aria-valuemin="0"
+														aria-valuemax="100">
+														<div
+															data-aos="fade-right"
+															class="flex flex-col justify-center overflow-hidden whitespace-nowrap bg-secondary text-center text-xs text-white transition duration-500"
+															style="width: 45%"></div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<!-- card 7 -->
+								<div class="rounded-xl bg-secondary/10 p-5">
+									<div
+										class="flex flex-wrap items-center justify-between gap-2 border-b-[3px] border-secondary/20 pb-2">
+										<div
+											class="relative flex items-center gap-2 before:absolute before:-bottom-[11px] before:left-0 before:h-[3px] before:w-[calc(100%+.5rem)] before:bg-secondary">
+											<span class="rounded-lg bg-accent-1 p-1 text-primary">
+												<svg
+													xmlns="http://www.w3.org/2000/svg"
+													viewBox="0 0 256 256"
+													fill="currentColor"
+													class="h-5 w-5">
+													<path
+														d="M244.8 150.4a8 8 0 0 1-11.2-1.6A51.6 51.6 0 0 0 192 128a8 8 0 0 1-7.37-4.89 8 8 0 0 1 0-6.22A8 8 0 0 1 192 112a24 24 0 1 0-23.24-30 8 8 0 1 1-15.5-4A40 40 0 1 1 219 117.51a67.94 67.94 0 0 1 27.43 21.68 8 8 0 0 1-1.63 11.21ZM190.92 212a8 8 0 1 1-13.84 8 57 57 0 0 0-98.16 0 8 8 0 1 1-13.84-8 72.06 72.06 0 0 1 33.74-29.92 48 48 0 1 1 58.36 0A72.06 72.06 0 0 1 190.92 212ZM128 176a32 32 0 1 0-32-32 32 32 0 0 0 32 32Zm-56-56a8 8 0 0 0-8-8 24 24 0 1 1 23.24-30 8 8 0 1 0 15.5-4A40 40 0 1 0 37 117.51a67.94 67.94 0 0 0-27.4 21.68 8 8 0 1 0 12.8 9.61A51.6 51.6 0 0 1 64 128a8 8 0 0 0 8-8Z" />
+												</svg>
+											</span>
+											<h6 class="text-base font-medium">Team</h6>
+										</div>
+									</div>
+
+									<div class="team-slider-container mt-6">
+										<div class="team-slider">
+											<div class="">
+												<div
+													class="group relative flex flex-wrap items-center gap-2 p-2">
+													<div
+														class="h-12 w-12 overflow-hidden rounded-full transition group-hover:ring group-hover:ring-secondary/20">
+														<img
+															src="/assets/img/avatar-1.png"
+															alt=""
+															class="h-full w-full rounded-full object-cover" />
+													</div>
+													<div class="">
+														<h6 class="text-sm font-medium">John J.</h6>
+														<a
+															href="/"
+															class="block text-xs text-gray-600 transition after:absolute after:inset-0 after:h-full after:w-full after:content-[''] hover:text-secondary">
+															See personal stats
+														</a>
+													</div>
+												</div>
+
+												<div
+													class="group relative flex flex-wrap items-center gap-2 p-2">
+													<div
+														class="h-12 w-12 overflow-hidden rounded-full transition group-hover:ring group-hover:ring-secondary/20">
+														<img
+															src="/assets/img/avatar-2.png"
+															alt=""
+															class="h-full w-full rounded-full object-cover" />
+													</div>
+													<div class="">
+														<h6 class="text-sm font-medium">Abby A.</h6>
+														<a
+															href="/"
+															class="block text-xs text-gray-600 transition after:absolute after:inset-0 after:h-full after:w-full after:content-[''] hover:text-secondary">
+															See personal stats
+														</a>
+													</div>
+												</div>
+
+												<div
+													class="group relative flex flex-wrap items-center gap-2 p-2">
+													<div
+														class="h-12 w-12 overflow-hidden rounded-full transition group-hover:ring group-hover:ring-secondary/20">
+														<img
+															src="/assets/img/avatar-3.png"
+															alt=""
+															class="h-full w-full rounded-full object-cover" />
+													</div>
+													<div class="">
+														<h6 class="text-sm font-medium">Paul P.</h6>
+														<a
+															href="/"
+															class="block text-xs text-gray-600 transition after:absolute after:inset-0 after:h-full after:w-full after:content-[''] hover:text-secondary">
+															See personal stats
+														</a>
+													</div>
+												</div>
+											</div>
+
+											<div class="">
+												<div
+													class="group relative flex flex-wrap items-center gap-2 p-2">
+													<div
+														class="h-12 w-12 overflow-hidden rounded-full transition group-hover:ring group-hover:ring-secondary/20">
+														<img
+															src="/assets/img/avatar-1.png"
+															alt=""
+															class="h-full w-full rounded-full object-cover" />
+													</div>
+													<div class="">
+														<h6 class="text-sm font-medium">John J.</h6>
+														<a
+															href="/"
+															class="block text-xs text-gray-600 transition after:absolute after:inset-0 after:h-full after:w-full after:content-[''] hover:text-secondary">
+															See personal stats
+														</a>
+													</div>
+												</div>
+
+												<div
+													class="group relative flex flex-wrap items-center gap-2 p-2">
+													<div
+														class="h-12 w-12 overflow-hidden rounded-full transition group-hover:ring group-hover:ring-secondary/20">
+														<img
+															src="/assets/img/avatar-2.png"
+															alt=""
+															class="h-full w-full rounded-full object-cover" />
+													</div>
+													<div class="">
+														<h6 class="text-sm font-medium">Abby A.</h6>
+														<a
+															href="/"
+															class="block text-xs text-gray-600 transition after:absolute after:inset-0 after:h-full after:w-full after:content-[''] hover:text-secondary">
+															See personal stats
+														</a>
+													</div>
+												</div>
+
+												<div
+													class="group relative flex flex-wrap items-center gap-2 p-2">
+													<div
+														class="h-12 w-12 overflow-hidden rounded-full transition group-hover:ring group-hover:ring-secondary/20">
+														<img
+															src="/assets/img/avatar-3.png"
+															alt=""
+															class="h-full w-full rounded-full object-cover" />
+													</div>
+													<div class="">
+														<h6 class="text-sm font-medium">Paul P.</h6>
+														<a
+															href="/"
+															class="block text-xs text-gray-600 transition after:absolute after:inset-0 after:h-full after:w-full after:content-[''] hover:text-secondary">
+															See personal stats
+														</a>
+													</div>
+												</div>
+											</div>
+
+											<div class="">
+												<div
+													class="group relative flex flex-wrap items-center gap-2 p-2">
+													<div
+														class="h-12 w-12 overflow-hidden rounded-full transition group-hover:ring group-hover:ring-secondary/20">
+														<img
+															src="/assets/img/avatar-1.png"
+															alt=""
+															class="h-full w-full rounded-full object-cover" />
+													</div>
+													<div class="">
+														<h6 class="text-sm font-medium">John J.</h6>
+														<a
+															href="/"
+															class="block text-xs text-gray-600 transition after:absolute after:inset-0 after:h-full after:w-full after:content-[''] hover:text-secondary">
+															See personal stats
+														</a>
+													</div>
+												</div>
+
+												<div
+													class="group relative flex flex-wrap items-center gap-2 p-2">
+													<div
+														class="h-12 w-12 overflow-hidden rounded-full transition group-hover:ring group-hover:ring-secondary/20">
+														<img
+															src="/assets/img/avatar-2.png"
+															alt=""
+															class="h-full w-full rounded-full object-cover" />
+													</div>
+													<div class="">
+														<h6 class="text-sm font-medium">Abby A.</h6>
+														<a
+															href="/"
+															class="block text-xs text-gray-600 transition after:absolute after:inset-0 after:h-full after:w-full after:content-[''] hover:text-secondary">
+															See personal stats
+														</a>
+													</div>
+												</div>
+
+												<div
+													class="group relative flex flex-wrap items-center gap-2 p-2">
+													<div
+														class="h-12 w-12 overflow-hidden rounded-full transition group-hover:ring group-hover:ring-secondary/20">
+														<img
+															src="/assets/img/avatar-3.png"
+															alt=""
+															class="h-full w-full rounded-full object-cover" />
+													</div>
+													<div class="">
+														<h6 class="text-sm font-medium">Paul P.</h6>
+														<a
+															href="/"
+															class="block text-xs text-gray-600 transition after:absolute after:inset-0 after:h-full after:w-full after:content-[''] hover:text-secondary">
+															See personal stats
+														</a>
+													</div>
+												</div>
+											</div>
+										</div>
+
+										<div
+											class="slider-controls mt-4 flex items-center justify-between">
+											<button
+												class="slider-prev flex h-8 w-8 items-center justify-center text-secondary/50 transition hover:text-secondary">
+												<svg
+													xmlns="http://www.w3.org/2000/svg"
+													width="16"
+													height="16"
+													fill="currentColor"
+													class="h-5 w-5"
+													viewBox="0 0 16 16">
+													<path
+														fill-rule="evenodd"
+														d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z" />
+												</svg>
+											</button>
+
+											<div
+												class="slider-navs flex items-center justify-center gap-2">
+												<button
+													class="block h-[3px] w-8 bg-secondary/50 transition"></button>
+												<button
+													class="block h-[3px] w-8 bg-secondary/50 transition"></button>
+												<button
+													class="block h-[3px] w-8 bg-secondary/50 transition"></button>
+											</div>
+
+											<button
+												class="slider-next flex h-8 w-8 items-center justify-center text-secondary/50 transition hover:text-secondary">
+												<svg
+													xmlns="http://www.w3.org/2000/svg"
+													width="16"
+													height="16"
+													fill="currentColor"
+													class="h-5 w-5"
+													viewBox="0 0 16 16">
+													<path
+														fill-rule="evenodd"
+														d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z" />
+												</svg>
+											</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div
+						id="this-month-tab"
+						class="hidden"
+						role="tabpanel"
+						aria-labelledby="this-month-tab-btn">
+						<div class="">
+							<div
+								class="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-2 2xl:grid-cols-4">
+								<!-- card 1 -->
+								<div class="rounded-xl bg-secondary/10 p-5 2xl:col-span-2">
+									<div
+										class="flex flex-wrap items-center justify-between gap-2 border-b-[3px] border-secondary/20 pb-2">
+										<div
+											class="relative flex items-center gap-2 before:absolute before:-bottom-[11px] before:left-0 before:h-[3px] before:w-[calc(100%+.5rem)] before:bg-secondary">
+											<span class="rounded-lg bg-accent-1 p-1 text-primary">
+												<svg
+													xmlns="http://www.w3.org/2000/svg"
+													fill="currentColor"
+													viewBox="0 0 17 19"
+													class="h-5 w-5">
+													<path
+														d="M15.349 1.395h-2.093V.698a.698.698 0 0 0-1.396 0v.697H4.885V.698a.698.698 0 1 0-1.396 0v.697H1.395A1.395 1.395 0 0 0 0 2.791v13.953a1.395 1.395 0 0 0 1.395 1.396H15.35a1.395 1.395 0 0 0 1.395-1.396V2.791a1.395 1.395 0 0 0-1.395-1.396ZM3.489 2.791v.697a.698.698 0 0 0 1.395 0v-.697h6.976v.697a.698.698 0 0 0 1.396 0v-.697h2.093v2.79H1.395v-2.79h2.093Zm11.86 13.953H1.395V6.977H15.35v9.767ZM6.977 9.07v5.581a.698.698 0 1 1-1.396 0v-4.453l-.385.194a.698.698 0 1 1-.624-1.249l1.395-.698a.698.698 0 0 1 1.01.625Zm5.159 2.655-1.67 2.229h1.395a.698.698 0 0 1 0 1.395H9.07a.697.697 0 0 1-.558-1.116l2.51-3.347a.697.697 0 1 0-1.161-.77.697.697 0 1 1-1.208-.697 2.093 2.093 0 1 1 3.483 2.306Z" />
+												</svg>
+											</span>
+											<h6 class="text-base font-medium">Appointments</h6>
+										</div>
+
+										<div
+											class="flex items-center gap-px text-sm font-medium text-primary">
+											<span class="">
+												<svg
+													xmlns="http://www.w3.org/2000/svg"
+													fill="currentColor"
+													viewBox="0 0 21 21"
+													class="h-4 w-4">
+													<path
+														d="M10.072 0a10.072 10.072 0 1 0 10.072 10.072A10.082 10.082 0 0 0 10.072 0Zm0 18.594a8.522 8.522 0 1 1 8.522-8.522 8.532 8.532 0 0 1-8.522 8.522Zm3.647-9.845a.774.774 0 1 1-1.096 1.096l-1.776-1.777v5.877a.775.775 0 1 1-1.55 0V8.069L7.521 9.845A.775.775 0 1 1 6.425 8.75l3.099-3.1a.775.775 0 0 1 1.096 0l3.099 3.1Z" />
+												</svg>
+											</span>
+											<span class=""> +5% </span>
+										</div>
+									</div>
+
+									<div class="px-4 py-6 lg:p-8">
+										<h2 class="text-5xl font-medium lg:text-8xl">150</h2>
+									</div>
+
+									<div class="">
+										<div
+											class="mb-2 flex flex-wrap justify-between gap-4 text-sm font-medium text-primary">
+											<p class="font-semibold">Progress Tracker</p>
+											<p>
+												<span class="font-medium text-secondary">
+													70%
+												</span>
+												to goal
+											</p>
+										</div>
+
+										<div
+											class="flex h-5 w-full overflow-hidden bg-secondary/15"
+											role="progressbar"
+											aria-valuenow="70"
+											aria-valuemin="0"
+											aria-valuemax="100">
+											<div
+												data-aos="fade-right"
+												class="flex flex-col justify-center overflow-hidden whitespace-nowrap bg-[#f4b610] text-center text-xs text-white transition duration-500"
+												style="width: 70%"></div>
+										</div>
+									</div>
+								</div>
+
+								<div class="grid gap-5">
+									<!-- card 2 -->
+									<div class="rounded-xl bg-secondary/10 p-5">
+										<div
+											class="flex flex-wrap items-center justify-between gap-2 border-b-[3px] border-secondary/20 pb-2">
+											<div
+												class="relative flex items-center gap-2 before:absolute before:-bottom-[11px] before:left-0 before:h-[3px] before:w-[calc(100%+.5rem)] before:bg-secondary">
+												<span
+													class="rounded-lg bg-accent-1 p-1 text-primary">
+													<svg
+														xmlns="http://www.w3.org/2000/svg"
+														fill="currentColor"
+														viewBox="0 0 16 16"
+														class="h-5 w-5">
+														<path
+															d="M9.725 6.173a.636.636 0 0 1 0-.9l2.731-2.73h-1.645a.636.636 0 0 1 0-1.271h3.18a.636.636 0 0 1 .636.636v3.18a.636.636 0 0 1-1.272 0V3.443l-2.73 2.73a.636.636 0 0 1-.9 0Zm6.164 5.837a4.472 4.472 0 0 1-4.442 3.889C5.135 15.899 0 10.763 0 4.452A4.472 4.472 0 0 1 3.889.009 1.272 1.272 0 0 1 5.21.765l1.679 3.75v.009a1.272 1.272 0 0 1-.146 1.26L5.088 7.748c.595 1.21 1.86 2.464 3.086 3.06l1.935-1.645a1.267 1.267 0 0 1 1.266-.156l.01.005 3.745 1.678a1.272 1.272 0 0 1 .76 1.32Zm-1.262-.16h-.009l-3.736-1.673-1.936 1.647a1.272 1.272 0 0 1-1.31.135c-1.49-.72-2.974-2.192-3.694-3.665a1.272 1.272 0 0 1 .125-1.31L5.724 5.02l-1.67-3.736v-.01a3.196 3.196 0 0 0-2.782 3.178 10.186 10.186 0 0 0 10.175 10.175 3.196 3.196 0 0 0 3.18-2.777Z" />
+													</svg>
+												</span>
+												<h6 class="text-base font-medium">Dials</h6>
+											</div>
+
+											<div
+												class="flex items-center gap-px text-sm font-medium text-primary">
+												<span class="">
+													<svg
+														xmlns="http://www.w3.org/2000/svg"
+														fill="currentColor"
+														viewBox="0 0 21 21"
+														class="h-4 w-4">
+														<path
+															d="M10.072 0a10.072 10.072 0 1 0 10.072 10.072A10.082 10.082 0 0 0 10.072 0Zm0 18.594a8.522 8.522 0 1 1 8.522-8.522 8.532 8.532 0 0 1-8.522 8.522Zm3.647-9.845a.774.774 0 1 1-1.096 1.096l-1.776-1.777v5.877a.775.775 0 1 1-1.55 0V8.069L7.521 9.845A.775.775 0 1 1 6.425 8.75l3.099-3.1a.775.775 0 0 1 1.096 0l3.099 3.1Z" />
+													</svg>
+												</span>
+												<span class=""> +7% </span>
+											</div>
+										</div>
+
+										<div class="px-4 pt-3 lg:px-8">
+											<h2 class="text-5xl font-medium">200</h2>
+										</div>
+									</div>
+
+									<!-- card 3 -->
+									<div class="rounded-xl bg-secondary/10 p-5">
+										<div
+											class="flex flex-wrap items-center justify-between gap-2 border-b-[3px] border-secondary/20 pb-2">
+											<div
+												class="relative flex items-center gap-2 before:absolute before:-bottom-[11px] before:left-0 before:h-[3px] before:w-[calc(100%+.5rem)] before:bg-secondary">
+												<span
+													class="rounded-lg bg-accent-1 p-1 text-primary">
+													<svg
+														xmlns="http://www.w3.org/2000/svg"
+														fill="currentColor"
+														viewBox="0 0 16 16"
+														class="h-5 w-5">
+														<path
+															d="M15.133 10.689 11.387 9.01l-.01-.005a1.272 1.272 0 0 0-1.265.156l-1.935 1.65C6.952 10.215 5.686 8.96 5.09 7.75l1.652-1.965a1.272 1.272 0 0 0 .15-1.258v-.01L5.21.768a1.272 1.272 0 0 0-1.32-.76A4.472 4.472 0 0 0 0 4.452c0 6.311 5.135 11.447 11.447 11.447a4.473 4.473 0 0 0 4.442-3.89 1.272 1.272 0 0 0-.756-1.32Zm-3.686 3.938A10.187 10.187 0 0 1 1.272 4.452a3.196 3.196 0 0 1 2.772-3.18v.01l1.67 3.736L4.07 6.984a1.272 1.272 0 0 0-.125 1.31c.72 1.473 2.205 2.945 3.694 3.665a1.274 1.274 0 0 0 1.252-.09.544.544 0 0 0 .058-.046l1.933-1.648 3.736 1.674h.009a3.196 3.196 0 0 1-3.18 2.778ZM8.903 3.816a.636.636 0 0 1 .636-.636h1.908V1.272a.636.636 0 0 1 1.272 0V3.18h1.908a.636.636 0 1 1 0 1.272h-1.908v1.907a.636.636 0 1 1-1.272 0V4.452H9.54a.636.636 0 0 1-.636-.636Z" />
+													</svg>
+												</span>
+												<h6 class="text-base font-medium">Reaches</h6>
+											</div>
+
+											<div
+												class="flex items-center gap-px text-sm font-medium text-primary">
+												<span class="">
+													<svg
+														xmlns="http://www.w3.org/2000/svg"
+														fill="currentColor"
+														viewBox="0 0 21 21"
+														class="h-4 w-4">
+														<path
+															d="M10.072 0a10.072 10.072 0 1 0 10.072 10.072A10.082 10.082 0 0 0 10.072 0Zm0 18.594a8.522 8.522 0 1 1 8.522-8.522 8.532 8.532 0 0 1-8.522 8.522Zm3.647-9.845a.774.774 0 1 1-1.096 1.096l-1.776-1.777v5.877a.775.775 0 1 1-1.55 0V8.069L7.521 9.845A.775.775 0 1 1 6.425 8.75l3.099-3.1a.775.775 0 0 1 1.096 0l3.099 3.1Z" />
+													</svg>
+												</span>
+												<span class=""> +3% </span>
+											</div>
+										</div>
+
+										<div class="px-4 pt-3 lg:px-8">
+											<h2 class="text-5xl font-medium">130</h2>
+										</div>
+									</div>
+								</div>
+
+								<div class="grid gap-5">
+									<!-- card 4 -->
+									<div class="rounded-xl bg-secondary/10 p-5">
+										<div
+											class="flex flex-wrap items-center justify-between gap-2 border-b-[3px] border-secondary/20 pb-2">
+											<div
+												class="relative flex items-center gap-2 before:absolute before:-bottom-[11px] before:left-0 before:h-[3px] before:w-[calc(100%+.5rem)] before:bg-secondary">
+												<span
+													class="rounded-lg bg-accent-1 p-1 text-primary">
+													<svg
+														xmlns="http://www.w3.org/2000/svg"
+														fill="currentColor"
+														viewBox="0 0 18 18"
+														class="h-5 w-5">
+														<path
+															d="M12.461 6.23v4.155a.692.692 0 1 1-1.384 0V7.902L6.72 12.259a.691.691 0 0 1-1.183-.49.693.693 0 0 1 .203-.49l4.357-4.356H7.615a.692.692 0 1 1 0-1.385h4.154a.693.693 0 0 1 .692.693ZM18 9a9 9 0 1 1-9-9 9.01 9.01 0 0 1 9 9Zm-1.385 0A7.615 7.615 0 1 0 9 16.615 7.625 7.625 0 0 0 16.615 9Z" />
+													</svg>
+												</span>
+												<h6 class="text-base font-medium">
+													Connection Rate
+												</h6>
+											</div>
+
+											<div
+												class="flex items-center gap-px text-sm font-medium text-primary">
+												<span class="">
+													<svg
+														xmlns="http://www.w3.org/2000/svg"
+														fill="currentColor"
+														viewBox="0 0 21 21"
+														class="h-4 w-4">
+														<path
+															d="M10.072 0a10.072 10.072 0 1 0 10.072 10.072A10.082 10.082 0 0 0 10.072 0Zm0 18.594a8.522 8.522 0 1 1 8.522-8.522 8.532 8.532 0 0 1-8.522 8.522Zm3.647-9.845a.774.774 0 1 1-1.096 1.096l-1.776-1.777v5.877a.775.775 0 1 1-1.55 0V8.069L7.521 9.845A.775.775 0 1 1 6.425 8.75l3.099-3.1a.775.775 0 0 1 1.096 0l3.099 3.1Z" />
+													</svg>
+												</span>
+												<span class=""> +12% </span>
+											</div>
+										</div>
+
+										<div class="px-4 pt-4 lg:px-8">
+											<h2 class="text-5xl font-medium">80%</h2>
+										</div>
+									</div>
+
+									<!-- card 5 -->
+									<div class="rounded-xl bg-secondary/10 p-5">
+										<div
+											class="flex flex-wrap items-center justify-between gap-2 border-b-[3px] border-secondary/20 pb-2">
+											<div
+												class="relative flex items-center gap-2 before:absolute before:-bottom-[11px] before:left-0 before:h-[3px] before:w-[calc(100%+.5rem)] before:bg-secondary">
+												<span
+													class="rounded-lg bg-accent-1 p-1 text-primary">
+													<svg
+														xmlns="http://www.w3.org/2000/svg"
+														fill="currentColor"
+														viewBox="0 0 16 16"
+														class="h-5 w-5">
+														<path
+															d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16" />
+														<path
+															d="m10.97 4.97-.02.022-3.473 4.425-2.093-2.094a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05" />
+													</svg>
+												</span>
+												<h6 class="text-base font-medium">
+													Conversion Rate
+												</h6>
+											</div>
+
+											<div
+												class="flex items-center gap-px text-sm font-medium text-primary">
+												<span class="">
+													<svg
+														xmlns="http://www.w3.org/2000/svg"
+														fill="currentColor"
+														viewBox="0 0 21 21"
+														class="h-4 w-4">
+														<path
+															d="M10.072 0a10.072 10.072 0 1 0 10.072 10.072A10.082 10.082 0 0 0 10.072 0Zm0 18.594a8.522 8.522 0 1 1 8.522-8.522 8.532 8.532 0 0 1-8.522 8.522Zm3.647-9.845a.774.774 0 1 1-1.096 1.096l-1.776-1.777v5.877a.775.775 0 1 1-1.55 0V8.069L7.521 9.845A.775.775 0 1 1 6.425 8.75l3.099-3.1a.775.775 0 0 1 1.096 0l3.099 3.1Z" />
+													</svg>
+												</span>
+												<span class=""> +12% </span>
+											</div>
+										</div>
+
+										<div class="px-4 pt-4 lg:px-8">
+											<h2 class="text-5xl font-medium">75%</h2>
+										</div>
+									</div>
+								</div>
+
+								<!-- card 6 -->
+								<div class="rounded-xl bg-secondary/10 p-5 2xl:col-span-3">
+									<div
+										class="flex flex-wrap items-center justify-between gap-2 border-b-[3px] border-secondary/20 pb-2">
+										<div
+											class="relative flex items-center gap-2 before:absolute before:-bottom-[11px] before:left-0 before:h-[3px] before:w-[calc(100%+.5rem)] before:bg-secondary">
+											<span class="rounded-lg bg-accent-1 p-1 text-primary">
+												<svg
+													xmlns="http://www.w3.org/2000/svg"
+													fill="currentColor"
+													viewBox="0 0 16 18"
+													class="h-5 w-5">
+													<path
+														d="M15.604 4.38a.636.636 0 0 1-.857-.271 7.482 7.482 0 0 0-2.66-2.935.638.638 0 0 1-.028-1.057.636.636 0 0 1 .707-.019 8.86 8.86 0 0 1 3.11 3.426.636.636 0 0 1-.272.856ZM.636 4.452a.636.636 0 0 0 .564-.343 7.483 7.483 0 0 1 2.66-2.935.636.636 0 1 0-.679-1.076 8.86 8.86 0 0 0-3.11 3.426.636.636 0 0 0 .565.928Zm14.794 8.263a1.272 1.272 0 0 1-1.098 1.912h-3.244a3.18 3.18 0 0 1-6.232 0H1.613a1.272 1.272 0 0 1-1.097-1.912c.717-1.236 1.097-2.994 1.097-5.083a6.36 6.36 0 1 1 12.719 0c0 2.088.38 3.846 1.098 5.083Zm-5.66 1.912H6.174a1.908 1.908 0 0 0 3.596 0Zm4.562-1.272c-.846-1.452-1.272-3.377-1.272-5.723a5.088 5.088 0 1 0-10.175 0c0 2.346-.428 4.272-1.272 5.723h12.719Z" />
+												</svg>
+											</span>
+											<h6 class="text-base font-medium">Dial Outcomes</h6>
+										</div>
+									</div>
+
+									<div class="pt-6 lg:pb-4">
+										<div
+											class="grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-6 xl:gap-20">
+											<div class="space-y-4">
+												<div class="">
+													<div
+														class="mb-1.5 flex flex-wrap items-center justify-between gap-2">
+														<div class="">
+															<h6 class="text-sm font-medium">
+																Appointment
+															</h6>
+														</div>
+														<p class="text-2xl font-semibold">3</p>
+													</div>
+													<div
+														class="flex h-1.5 w-full overflow-hidden bg-secondary/15"
+														role="progressbar"
+														aria-valuenow="40"
+														aria-valuemin="0"
+														aria-valuemax="100">
+														<div
+															data-aos="fade-right"
+															class="flex flex-col justify-center overflow-hidden whitespace-nowrap bg-secondary text-center text-xs text-white transition duration-500"
+															style="width: 40%"></div>
+													</div>
+												</div>
+
+												<div class="">
+													<div
+														class="mb-1.5 flex flex-wrap items-center justify-between gap-2">
+														<div class="">
+															<h6 class="text-sm font-medium">
+																Callback
+															</h6>
+														</div>
+														<p class="text-2xl font-semibold">4</p>
+													</div>
+													<div
+														class="flex h-1.5 w-full overflow-hidden bg-secondary/15"
+														role="progressbar"
+														aria-valuenow="25"
+														aria-valuemin="0"
+														aria-valuemax="100">
+														<div
+															data-aos="fade-right"
+															class="flex flex-col justify-center overflow-hidden whitespace-nowrap bg-secondary text-center text-xs text-white transition duration-500"
+															style="width: 25%"></div>
+													</div>
+												</div>
+
+												<div class="">
+													<div
+														class="mb-1.5 flex flex-wrap items-center justify-between gap-2">
+														<div class="">
+															<h6 class="text-sm font-medium">
+																Email
+															</h6>
+														</div>
+														<p class="text-2xl font-semibold">2</p>
+													</div>
+													<div
+														class="flex h-1.5 w-full overflow-hidden bg-secondary/15"
+														role="progressbar"
+														aria-valuenow="15"
+														aria-valuemin="0"
+														aria-valuemax="100">
+														<div
+															data-aos="fade-right"
+															class="flex flex-col justify-center overflow-hidden whitespace-nowrap bg-secondary text-center text-xs text-white transition duration-500"
+															style="width: 15%"></div>
+													</div>
+												</div>
+
+												<div class="">
+													<div
+														class="mb-1.5 flex flex-wrap items-center justify-between gap-2">
+														<div class="">
+															<h6 class="text-sm font-medium">
+																Referral
+															</h6>
+														</div>
+														<p class="text-2xl font-semibold">5</p>
+													</div>
+													<div
+														class="flex h-1.5 w-full overflow-hidden bg-secondary/15"
+														role="progressbar"
+														aria-valuenow="33"
+														aria-valuemin="0"
+														aria-valuemax="100">
+														<div
+															data-aos="fade-right"
+															class="flex flex-col justify-center overflow-hidden whitespace-nowrap bg-secondary text-center text-xs text-white transition duration-500"
+															style="width: 33%"></div>
+													</div>
+												</div>
+											</div>
+											<div class="space-y-4">
+												<div class="">
+													<div
+														class="mb-1.5 flex flex-wrap items-center justify-between gap-2">
+														<div class="">
+															<h6 class="text-sm font-medium">
+																Hung Up
+															</h6>
+														</div>
+														<p class="text-2xl font-semibold">20</p>
+													</div>
+													<div
+														class="flex h-1.5 w-full overflow-hidden bg-secondary/15"
+														role="progressbar"
+														aria-valuenow="40"
+														aria-valuemin="0"
+														aria-valuemax="100">
+														<div
+															data-aos="fade-right"
+															class="flex flex-col justify-center overflow-hidden whitespace-nowrap bg-secondary text-center text-xs text-white transition duration-500"
+															style="width: 40%"></div>
+													</div>
+												</div>
+
+												<div class="">
+													<div
+														class="mb-1.5 flex flex-wrap items-center justify-between gap-2">
+														<div class="">
+															<h6 class="text-sm font-medium">
+																Not Interested
+															</h6>
+														</div>
+														<p class="text-2xl font-semibold">6</p>
+													</div>
+													<div
+														class="flex h-1.5 w-full overflow-hidden bg-secondary/15"
+														role="progressbar"
+														aria-valuenow="40"
+														aria-valuemin="0"
+														aria-valuemax="100">
+														<div
+															data-aos="fade-right"
+															class="flex flex-col justify-center overflow-hidden whitespace-nowrap bg-secondary text-center text-xs text-white transition duration-500"
+															style="width: 40%"></div>
+													</div>
+												</div>
+
+												<div class="">
+													<div
+														class="mb-1.5 flex flex-wrap items-center justify-between gap-2">
+														<div class="">
+															<h6 class="text-sm font-medium">
+																No Answer
+															</h6>
+														</div>
+														<p class="text-2xl font-semibold">10</p>
+													</div>
+													<div
+														class="flex h-1.5 w-full overflow-hidden bg-secondary/15"
+														role="progressbar"
+														aria-valuenow="30"
+														aria-valuemin="0"
+														aria-valuemax="100">
+														<div
+															data-aos="fade-right"
+															class="flex flex-col justify-center overflow-hidden whitespace-nowrap bg-secondary text-center text-xs text-white transition duration-500"
+															style="width: 30%"></div>
+													</div>
+												</div>
+
+												<div class="">
+													<div
+														class="mb-1.5 flex flex-wrap items-center justify-between gap-2">
+														<div class="">
+															<h6 class="text-sm font-medium">
+																Discard
+															</h6>
+														</div>
+														<p class="text-2xl font-semibold">16</p>
+													</div>
+													<div
+														class="flex h-1.5 w-full overflow-hidden bg-secondary/15"
+														role="progressbar"
+														aria-valuenow="60"
+														aria-valuemin="0"
+														aria-valuemax="100">
+														<div
+															data-aos="fade-right"
+															class="flex flex-col justify-center overflow-hidden whitespace-nowrap bg-secondary text-center text-xs text-white transition duration-500"
+															style="width: 60%"></div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<!-- card 7 -->
+								<div class="rounded-xl bg-secondary/10 p-5">
+									<div
+										class="flex flex-wrap items-center justify-between gap-2 border-b-[3px] border-secondary/20 pb-2">
+										<div
+											class="relative flex items-center gap-2 before:absolute before:-bottom-[11px] before:left-0 before:h-[3px] before:w-[calc(100%+.5rem)] before:bg-secondary">
+											<span class="rounded-lg bg-accent-1 p-1 text-primary">
+												<svg
+													xmlns="http://www.w3.org/2000/svg"
+													viewBox="0 0 256 256"
+													fill="currentColor"
+													class="h-5 w-5">
+													<path
+														d="M244.8 150.4a8 8 0 0 1-11.2-1.6A51.6 51.6 0 0 0 192 128a8 8 0 0 1-7.37-4.89 8 8 0 0 1 0-6.22A8 8 0 0 1 192 112a24 24 0 1 0-23.24-30 8 8 0 1 1-15.5-4A40 40 0 1 1 219 117.51a67.94 67.94 0 0 1 27.43 21.68 8 8 0 0 1-1.63 11.21ZM190.92 212a8 8 0 1 1-13.84 8 57 57 0 0 0-98.16 0 8 8 0 1 1-13.84-8 72.06 72.06 0 0 1 33.74-29.92 48 48 0 1 1 58.36 0A72.06 72.06 0 0 1 190.92 212ZM128 176a32 32 0 1 0-32-32 32 32 0 0 0 32 32Zm-56-56a8 8 0 0 0-8-8 24 24 0 1 1 23.24-30 8 8 0 1 0 15.5-4A40 40 0 1 0 37 117.51a67.94 67.94 0 0 0-27.4 21.68 8 8 0 1 0 12.8 9.61A51.6 51.6 0 0 1 64 128a8 8 0 0 0 8-8Z" />
+												</svg>
+											</span>
+											<h6 class="text-base font-medium">Team</h6>
+										</div>
+									</div>
+
+									<div class="team-slider-container mt-6">
+										<div class="team-slider">
+											<div class="">
+												<div
+													class="group relative flex flex-wrap items-center gap-2 p-2">
+													<div
+														class="h-12 w-12 overflow-hidden rounded-full transition group-hover:ring group-hover:ring-secondary/20">
+														<img
+															src="/assets/img/avatar-1.png"
+															alt=""
+															class="h-full w-full rounded-full object-cover" />
+													</div>
+													<div class="">
+														<h6 class="text-sm font-medium">John J.</h6>
+														<a
+															href="/"
+															class="block text-xs text-gray-600 transition after:absolute after:inset-0 after:h-full after:w-full after:content-[''] hover:text-secondary">
+															See personal stats
+														</a>
+													</div>
+												</div>
+
+												<div
+													class="group relative flex flex-wrap items-center gap-2 p-2">
+													<div
+														class="h-12 w-12 overflow-hidden rounded-full transition group-hover:ring group-hover:ring-secondary/20">
+														<img
+															src="/assets/img/avatar-2.png"
+															alt=""
+															class="h-full w-full rounded-full object-cover" />
+													</div>
+													<div class="">
+														<h6 class="text-sm font-medium">Abby A.</h6>
+														<a
+															href="/"
+															class="block text-xs text-gray-600 transition after:absolute after:inset-0 after:h-full after:w-full after:content-[''] hover:text-secondary">
+															See personal stats
+														</a>
+													</div>
+												</div>
+
+												<div
+													class="group relative flex flex-wrap items-center gap-2 p-2">
+													<div
+														class="h-12 w-12 overflow-hidden rounded-full transition group-hover:ring group-hover:ring-secondary/20">
+														<img
+															src="/assets/img/avatar-3.png"
+															alt=""
+															class="h-full w-full rounded-full object-cover" />
+													</div>
+													<div class="">
+														<h6 class="text-sm font-medium">Paul P.</h6>
+														<a
+															href="/"
+															class="block text-xs text-gray-600 transition after:absolute after:inset-0 after:h-full after:w-full after:content-[''] hover:text-secondary">
+															See personal stats
+														</a>
+													</div>
+												</div>
+											</div>
+											<div class="">
+												<div
+													class="group relative flex flex-wrap items-center gap-2 p-2">
+													<div
+														class="h-12 w-12 overflow-hidden rounded-full transition group-hover:ring group-hover:ring-secondary/20">
+														<img
+															src="/assets/img/avatar-1.png"
+															alt=""
+															class="h-full w-full rounded-full object-cover" />
+													</div>
+													<div class="">
+														<h6 class="text-sm font-medium">John J.</h6>
+														<a
+															href="/"
+															class="block text-xs text-gray-600 transition after:absolute after:inset-0 after:h-full after:w-full after:content-[''] hover:text-secondary">
+															See personal stats
+														</a>
+													</div>
+												</div>
+
+												<div
+													class="group relative flex flex-wrap items-center gap-2 p-2">
+													<div
+														class="h-12 w-12 overflow-hidden rounded-full transition group-hover:ring group-hover:ring-secondary/20">
+														<img
+															src="/assets/img/avatar-2.png"
+															alt=""
+															class="h-full w-full rounded-full object-cover" />
+													</div>
+													<div class="">
+														<h6 class="text-sm font-medium">Abby A.</h6>
+														<a
+															href="/"
+															class="block text-xs text-gray-600 transition after:absolute after:inset-0 after:h-full after:w-full after:content-[''] hover:text-secondary">
+															See personal stats
+														</a>
+													</div>
+												</div>
+
+												<div
+													class="group relative flex flex-wrap items-center gap-2 p-2">
+													<div
+														class="h-12 w-12 overflow-hidden rounded-full transition group-hover:ring group-hover:ring-secondary/20">
+														<img
+															src="/assets/img/avatar-3.png"
+															alt=""
+															class="h-full w-full rounded-full object-cover" />
+													</div>
+													<div class="">
+														<h6 class="text-sm font-medium">Paul P.</h6>
+														<a
+															href="/"
+															class="block text-xs text-gray-600 transition after:absolute after:inset-0 after:h-full after:w-full after:content-[''] hover:text-secondary">
+															See personal stats
+														</a>
+													</div>
+												</div>
+											</div>
+											<div class="">
+												<div
+													class="group relative flex flex-wrap items-center gap-2 p-2">
+													<div
+														class="h-12 w-12 overflow-hidden rounded-full transition group-hover:ring group-hover:ring-secondary/20">
+														<img
+															src="/assets/img/avatar-1.png"
+															alt=""
+															class="h-full w-full rounded-full object-cover" />
+													</div>
+													<div class="">
+														<h6 class="text-sm font-medium">John J.</h6>
+														<a
+															href="/"
+															class="block text-xs text-gray-600 transition after:absolute after:inset-0 after:h-full after:w-full after:content-[''] hover:text-secondary">
+															See personal stats
+														</a>
+													</div>
+												</div>
+
+												<div
+													class="group relative flex flex-wrap items-center gap-2 p-2">
+													<div
+														class="h-12 w-12 overflow-hidden rounded-full transition group-hover:ring group-hover:ring-secondary/20">
+														<img
+															src="/assets/img/avatar-2.png"
+															alt=""
+															class="h-full w-full rounded-full object-cover" />
+													</div>
+													<div class="">
+														<h6 class="text-sm font-medium">Abby A.</h6>
+														<a
+															href="/"
+															class="block text-xs text-gray-600 transition after:absolute after:inset-0 after:h-full after:w-full after:content-[''] hover:text-secondary">
+															See personal stats
+														</a>
+													</div>
+												</div>
+
+												<div
+													class="group relative flex flex-wrap items-center gap-2 p-2">
+													<div
+														class="h-12 w-12 overflow-hidden rounded-full transition group-hover:ring group-hover:ring-secondary/20">
+														<img
+															src="/assets/img/avatar-3.png"
+															alt=""
+															class="h-full w-full rounded-full object-cover" />
+													</div>
+													<div class="">
+														<h6 class="text-sm font-medium">Paul P.</h6>
+														<a
+															href="/"
+															class="block text-xs text-gray-600 transition after:absolute after:inset-0 after:h-full after:w-full after:content-[''] hover:text-secondary">
+															See personal stats
+														</a>
+													</div>
+												</div>
+											</div>
+										</div>
+
+										<div
+											class="slider-controls mt-4 flex items-center justify-between">
+											<button
+												class="slider-prev flex h-8 w-8 items-center justify-center text-secondary/50 transition hover:text-secondary">
+												<svg
+													xmlns="http://www.w3.org/2000/svg"
+													width="16"
+													height="16"
+													fill="currentColor"
+													class="h-5 w-5"
+													viewBox="0 0 16 16">
+													<path
+														fill-rule="evenodd"
+														d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z" />
+												</svg>
+											</button>
+
+											<div
+												class="slider-navs flex items-center justify-center gap-2">
+												<button
+													class="block h-[3px] w-8 bg-secondary/50 transition"></button>
+												<button
+													class="block h-[3px] w-8 bg-secondary/50 transition"></button>
+												<button
+													class="block h-[3px] w-8 bg-secondary/50 transition"></button>
+											</div>
+
+											<button
+												class="slider-next flex h-8 w-8 items-center justify-center text-secondary/50 transition hover:text-secondary">
+												<svg
+													xmlns="http://www.w3.org/2000/svg"
+													width="16"
+													height="16"
+													fill="currentColor"
+													class="h-5 w-5"
+													viewBox="0 0 16 16">
+													<path
+														fill-rule="evenodd"
+														d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z" />
+												</svg>
+											</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</main>
+		</div>
+
+		<script src="/assets/js/preline.js"></script>
+		<script src="/assets/js/tiny-slider.js"></script>
+		<script src="/assets/js/aos.min.js"></script>
+		<script src="/assets/js/moveable.min.js"></script>
+		<!-- <script src="assets/js/btn-animation.js"></script> -->
+		<script src="/assets/js/scripts.js"></script>
+	</body>
+</html>

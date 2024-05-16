@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.slider-navs .tns-nav-active {
+	@apply bg-secondary;
+}
+
+.moveable-control-box {
+	display: none !important;
+}
+
+.typing-anim {
+	font-kerning: none;
+}
+
+/* Tab */
+
+.tab .active {
+	@apply border-accent-2 bg-accent-2 text-white;
+}
+
+.tab-content {
+	@apply hidden;
+}
+
+.tab-content.active {
+	@apply block;
+}
+
+.tab.reorder {
+	@apply flex-row;
+}

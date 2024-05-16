@@ -1,0 +1,53 @@
+{
+  "name": "twilio-voice-javascript-sdk-quickstart-node",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Quick Start application template for Twilio Voice JavaScript SDK on Node.js",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "eslint": "./node_modules/.bin/eslint .",
+    "test": "./node_modules/.bin/jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "github.com/TwilioDevEd/client-quickstart-node"
+  },
+  "keywords": [
+    "twilio",
+    "voip",
+    "ip",
+    "chat",
+    "real",
+    "time",
+    "diggity"
+  ],
+  "author": "Twilio Developer Education",
+  "license": "MIT",
+  "engines": {
+    "node": ">=10.x"
+  },
+  "dependencies": {
+    "@twilio/voice-sdk": "^2.2.0",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.0",
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
+    "cryptr": "^6.3.0",
+    "dotenv": "^10.0.0",
+    "ejs": "^3.1.9",
+    "express": "^4.17.1",
+    "express-session": "^1.18.0",
+    "jsonwebtoken": "^9.0.2",
+    "method-override": "^3.0.0",
+    "mssql": "^10.0.2",
+    "nodemon": "^3.0.3",
+    "twilio": "^4.21.0"
+  },
+  "devDependencies": {
+    "eslint": "^7.29.0",
+    "eslint-config-google": "^0.14.0",
+    "jest": "^27.0.5",
+    "prettier": "2.3.1"
+  }
+}

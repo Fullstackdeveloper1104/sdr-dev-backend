@@ -1,0 +1,30 @@
+<!-- Login.ejs -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
+<body>
+
+<h1>Login</h1>
+
+<script>
+  // Ask the user to enter a username through a prompt
+  var username = prompt('Please enter your username:');
+
+  // Check if the user entered a username
+  if (username) {
+    // Set a cookie with the entered username
+    document.cookie = 'username=' + username + '; path=/';
+    console.log('Cookie set successfully for username:', username);
+  } else {
+    console.log('No username entered. Cookie not set.');
+  }
+</script>
+
+</body>
+</html>
